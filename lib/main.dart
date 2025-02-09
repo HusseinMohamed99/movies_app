@@ -3,6 +3,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movies_app/core/helpers/constant/constant.dart';
 import 'package:movies_app/core/helpers/export_manager/export_manager.dart';
@@ -14,6 +15,7 @@ void main() async {
   await _initializeFirebase();
   ScreenUtil.ensureScreenSize();
   Bloc.observer = MyBlocObserver();
+  await dotenv.load(fileName: ".env");
 
   // Initialize all services including BlocProviders
   await serviceLocator();
