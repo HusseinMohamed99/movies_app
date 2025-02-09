@@ -69,6 +69,7 @@ class ShowSimilarMovies extends StatelessWidget {
                     imageUrl: ApiConstance.imageURL(similar.backdropPath ?? ''),
                     width: 120.w,
                     height: double.infinity,
+                    boxFit: BoxFit.fitHeight,
                   ),
                 ),
               ),
