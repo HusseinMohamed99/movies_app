@@ -19,7 +19,7 @@ class CachedImage extends StatelessWidget {
     return CachedNetworkImage(
       imageUrl: imageUrl?.isNotEmpty == true
           ? imageUrl!
-          : "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+          : "https://firebasestorage.googleapis.com/v0/b/egydead-df0d2.firebasestorage.app/o/no-data.png?alt=media&token=0eb352ef-76ec-4d9e-afce-80c58757b697",
       height: height?.h,
       width: width?.w,
       fit: boxFit ?? BoxFit.cover,

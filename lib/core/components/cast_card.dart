@@ -19,8 +19,8 @@ class CastCard extends StatelessWidget {
             child: CachedImage(
               imageUrl: cast.profileUrl,
               width: double.infinity,
-              height: 85.h,
-              boxFit: BoxFit.fill,
+              height: 70.h,
+              boxFit: BoxFit.fitWidth,
             ),
           ),
           Space(height: 8, width: 0),
