@@ -9,6 +9,7 @@ import 'package:movies_app/core/helpers/app_string/app_string.dart';
 import 'package:movies_app/core/helpers/enum/enum.dart';
 import 'package:movies_app/core/helpers/export_manager/export_manager.dart';
 import 'package:movies_app/image_assets.dart';
+import 'package:movies_app/presentation_main_app/screen/main_screen.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 

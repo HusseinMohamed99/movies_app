@@ -19,7 +19,15 @@ class NowPlayingCarousel extends StatelessWidget {
   Widget _buildCarouselItem(Movies movie, BuildContext context) {
     return GestureDetector(
       key: const Key('openMovieMinimalDetail'),
-      onTap: () => navigateToMovieDetails(context, movie.id),
+      onTap: () {
+        if (AdManager.interstitialAd != null) {
+          AdManager.interstitialAd!.show();
+        } else {
+          dev.log('⚠️ Interstitial ad is not ready, loading a new one...');
+          AdManager.loadInterstitialAd();
+        }
+        navigateToMovieDetails(context, movie.id);
+      },
       child: Stack(
         children: [
           _buildBackgroundImage(movie.backdropPath),

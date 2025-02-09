@@ -1,7 +1,39 @@
-part of './../../core/helpers/export_manager/export_manager.dart';
+import 'dart:developer';
 
-class MainScreen extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:movies_app/core/ads_manager/ad_manager.dart';
+import 'package:movies_app/core/helpers/export_manager/export_manager.dart';
+
+class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
+
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    try {
+      AdManager.loadAdBanner(() {
+        setState(() {});
+      });
+    } catch (e) {
+      log('Error loading banner ad: $e');
+    }
+  }
+
+  @override
+  void dispose() {
+    AdManager.disposeAdBanner();
+    AdManager.disposeInterstitialAd();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +60,19 @@ class MainScreen extends StatelessWidget {
                     icon: Icons.settings, label: "Settings"),
               ],
             ),
-            body: state.screens[state.currentIndex],
+            body: Column(
+              children: [
+                Expanded(child: state.screens[state.currentIndex]),
+                Visibility(
+                  visible: AdManager.bannerAd != null,
+                  child: SizedBox(
+                    height: AdManager.bannerAd!.size.height.toDouble(),
+                    width: AdManager.bannerAd!.size.width.toDouble(),
+                    child: AdWidget(ad: AdManager.bannerAd!),
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },
