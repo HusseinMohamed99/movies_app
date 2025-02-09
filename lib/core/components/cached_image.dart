@@ -4,34 +4,37 @@ class CachedImage extends StatelessWidget {
   const CachedImage({
     super.key,
     this.imageUrl,
-    required this.width,
-    required this.height,
+    this.width,
+    this.height,
     this.boxFit,
   });
 
   final String? imageUrl;
-  final double height;
-  final double width;
+  final double? height;
+  final double? width;
   final BoxFit? boxFit;
 
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
-      imageUrl: imageUrl ?? '',
-      height: height.h,
-      width: width.w,
+      imageUrl: imageUrl?.isNotEmpty == true
+          ? imageUrl!
+          : "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+      height: height?.h,
+      width: width?.w,
       fit: boxFit ?? BoxFit.cover,
-      errorWidget: (_, __, ___) => Container(
-        width: width.w,
-        height: height.h,
-        decoration: BoxDecoration(
-          color: ColorManager.charCoolColor,
-          borderRadius: BorderRadius.circular(10).r,
+      placeholder: (_, __) => Center(
+        child: SpinKitDoubleBounce(
+          color: ColorManager.primaryGreenColor,
+          duration: Duration(milliseconds: 3000),
+          size: 50.0,
         ),
-        child: Image.asset(
-          Assets.imagesOopsError,
-          fit: BoxFit.fitHeight,
-        ),
+      ),
+      errorWidget: (_, __, ___) => SvgPicture.asset(
+        Assets.imagesError,
+        fit: BoxFit.fitWidth,
+        width: width,
+        height: height ?? 90.h,
       ),
     );
   }
