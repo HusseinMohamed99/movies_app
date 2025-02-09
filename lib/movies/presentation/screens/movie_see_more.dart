@@ -25,7 +25,6 @@ class MovieSeeMoreScreen extends StatelessWidget {
             final movie = movieList[index];
             return _buildMovieCard(context, movie);
           } else {
-            // Trigger addEvent to fetch more data when reaching the end of the list
             addEvent();
             return const LoadingIndicator();
           }
@@ -88,7 +87,9 @@ Widget _buildMovieImage(Movies movie) {
 
 Widget _buildMovieInfo(BuildContext context, Movies movie) {
   return Column(
+    spacing: 10.h,
     crossAxisAlignment: CrossAxisAlignment.start,
+    mainAxisAlignment: MainAxisAlignment.start,
     children: [
       Text(
         movie.title,
@@ -96,15 +97,8 @@ Widget _buildMovieInfo(BuildContext context, Movies movie) {
         maxLines: 1,
         style: context.textTheme.titleMedium,
       ),
-      Space(height: 5, width: 0),
-      Row(
-        children: [
-          BuildReleaseDateChip(releaseDate: movie.releaseDate),
-          Space(width: 16, height: 0),
-          BuildRating(rating: movie.voteAverage),
-        ],
-      ),
-      Space(height: 10, width: 0),
+      BuildReleaseDateChip(releaseDate: movie.releaseDate),
+      BuildRating(rating: movie.voteAverage),
       Text(
         movie.overview,
         maxLines: 2,
