@@ -98,6 +98,7 @@ class MoviesRecommendationWidget extends StatelessWidget {
                     ),
                     width: 120.w,
                     height: double.infinity,
+                    boxFit: BoxFit.fitHeight,
                   ),
                 ),
               ),
