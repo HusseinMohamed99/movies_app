@@ -30,11 +30,13 @@ class CachedImage extends StatelessWidget {
           size: 50.0,
         ),
       ),
-      errorWidget: (_, __, ___) => SvgPicture.asset(
-        Assets.imagesError,
-        fit: BoxFit.fitWidth,
-        width: width,
-        height: height ?? 90.h,
+      errorWidget: (_, __, ___) => Center(
+        child: SvgPicture.asset(
+          Assets.imagesError,
+          fit: BoxFit.fitWidth,
+          width: width,
+          height: 60.h,
+        ),
       ),
     );
   }
