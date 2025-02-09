@@ -59,7 +59,7 @@ class BuildHeaderTvWidget extends StatelessWidget {
         children: [
           Text(
             title,
-            style: context.textTheme.titleSmall,
+            style: TextStyleManager.titleSmall(context: context),
           ),
           GestureDetector(
             onTap: () {
@@ -75,7 +75,7 @@ class BuildHeaderTvWidget extends StatelessWidget {
                 children: [
                   Text(
                     AppString.seeMore,
-                    style: context.textTheme.labelSmall,
+                    style: TextStyleManager.labelSmall(context: context),
                   ),
                   Icon(
                     Icons.arrow_forward_ios,

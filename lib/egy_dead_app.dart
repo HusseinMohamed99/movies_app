@@ -25,6 +25,7 @@ class EgyDeadApp extends StatelessWidget {
             initialRoute: Routes.homePage,
             onGenerateRoute: appRouter.generateRoute,
             title: AppString.appTitle,
+            themeMode: ThemeMode.dark,
             theme: getThemeData(context)[AppTheme.darkTheme],
             darkTheme: getThemeData(context)[AppTheme.darkTheme],
           ),

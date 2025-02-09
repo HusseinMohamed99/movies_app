@@ -128,7 +128,7 @@ Future<void> showUpdateDialog(BuildContext context) async {
         return AlertDialog(
           title: Text(
             'تحديث جديد متاح',
-            style: context.textTheme.titleSmall,
+            style: TextStyleManager.titleSmall(context: context),
           ),
           content: const Text(
               'يوجد إصدار جديد من التطبيق. يُفضل تحديث التطبيق للحصول على أحدث الميزات.'),
@@ -136,7 +136,8 @@ Future<void> showUpdateDialog(BuildContext context) async {
             TextButton(
               child: Text(
                 'لاحقًا',
-                style: context.textTheme.titleSmall!.copyWith(
+                style: TextStyleManager.titleSmall(
+                  context: context,
                   color: ColorManager.primaryRedColor,
                 ),
               ),
@@ -147,7 +148,8 @@ Future<void> showUpdateDialog(BuildContext context) async {
             TextButton(
               child: Text(
                 'تحديث الآن',
-                style: context.textTheme.titleSmall!.copyWith(
+                style: TextStyleManager.titleSmall(
+                  context: context,
                   color: ColorManager.primaryGreenColor,
                 ),
               ),

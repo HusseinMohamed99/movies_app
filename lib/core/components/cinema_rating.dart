@@ -12,7 +12,7 @@ class CinemaRating extends StatelessWidget {
         Icon(Icons.star, color: ColorManager.iconRateColor, size: 24.sp),
         Text(
           rate ?? '',
-          style: context.textTheme.labelMedium,
+          style: TextStyleManager.labelMedium(context: context),
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),

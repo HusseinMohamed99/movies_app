@@ -191,7 +191,6 @@ part './../../error/failure.dart';
 part './../../extensions/navigation_extensions.dart';
 part './../../extensions/skeletonizer_extension.dart';
 part './../../extensions/snack_bar.dart';
-part './../../extensions/text_style_extension.dart';
 part './../../generic_use_case/generic_use_case.dart';
 part './../../network/error_message_model.dart';
 part './../../routing/app_router.dart';

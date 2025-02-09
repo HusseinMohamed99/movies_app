@@ -11,7 +11,9 @@ class TapsWidget extends StatelessWidget {
     return Tab(
       child: Text(
         title,
-        style: context.textTheme.labelSmall,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+        style: TextStyleManager.labelSmall(context: context),
       ),
     );
   }

@@ -11,7 +11,7 @@ class NoResults extends StatelessWidget {
       child: Center(
         child: Text(
           'No Results',
-          style: context.textTheme.labelMedium,
+          style: TextStyleManager.labelMedium(context: context),
         ),
       ),
     );

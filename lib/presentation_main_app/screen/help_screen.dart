@@ -12,7 +12,7 @@ class SupportScreen extends StatelessWidget {
         elevation: 0,
         title: Text(
           AppString.contactSupport,
-          style: context.textTheme.headlineSmall,
+          style: TextStyleManager.headlineSmall(context: context),
         ),
         centerTitle: true,
       ),
@@ -115,7 +115,7 @@ class CardItem extends StatelessWidget {
               ),
               Text(
                 title,
-                style: context.textTheme.labelMedium,
+                style: TextStyleManager.labelMedium(context: context),
               ),
             ],
           ),

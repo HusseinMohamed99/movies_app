@@ -11,7 +11,7 @@ class SearchText extends StatelessWidget {
       child: Center(
         child: Text(
           'Search Text',
-          style: context.textTheme.labelMedium,
+          style: TextStyleManager.labelMedium(context: context),
           textAlign: TextAlign.center,
         ),
       ),

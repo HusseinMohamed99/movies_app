@@ -25,11 +25,11 @@ class ReviewContent extends StatelessWidget {
                 children: [
                   Text(
                     review.authorName,
-                    style: context.textTheme.titleSmall,
+                    style: TextStyleManager.titleSmall(context: context),
                   ),
                   Text(
                     review.authorUserName,
-                    style: context.textTheme.bodySmall,
+                    style: TextStyleManager.bodySmall(context: context),
                   ),
                 ],
               )
@@ -39,7 +39,7 @@ class ReviewContent extends StatelessWidget {
             padding: EdgeInsets.only(top: 10.h),
             child: Text(
               review.content,
-              style: context.textTheme.labelSmall,
+              style: TextStyleManager.labelSmall(context: context),
             ),
           ),
         ],

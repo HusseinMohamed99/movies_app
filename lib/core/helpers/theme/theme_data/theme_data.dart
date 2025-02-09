@@ -17,36 +17,6 @@ Map<AppTheme, ThemeData> getThemeData(BuildContext context) => {
           ),
         ),
         textTheme: GoogleFonts.poppinsTextTheme().copyWith(
-          headlineSmall: buildTextStyle(
-            context: context,
-            fontSize: 24,
-            color: ColorManager.whiteColor,
-          ),
-          titleLarge: buildTextStyle(
-            context: context,
-            fontSize: 22,
-            color: ColorManager.whiteColor,
-          ),
-          titleMedium: buildTextStyle(
-            context: context,
-            fontSize: 16,
-            color: ColorManager.whiteColor,
-          ),
-          titleSmall: buildTextStyle(
-            context: context,
-            color: ColorManager.whiteColor,
-            fontSize: 14,
-          ),
-          labelMedium: buildTextStyle(
-            context: context,
-            fontSize: 12.sp,
-            color: ColorManager.whiteColor,
-          ),
-          labelSmall: buildTextStyle(
-            context: context,
-            fontSize: 11.sp,
-            color: ColorManager.whiteColor,
-          ),
           bodySmall: buildTextStyle(
             context: context,
             fontSize: 8.sp,

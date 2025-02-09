@@ -49,7 +49,7 @@ class GridViewCard extends StatelessWidget {
             item.title,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: context.textTheme.labelMedium,
+            style: TextStyleManager.labelMedium(context: context),
           ),
         ),
       ],

@@ -26,7 +26,7 @@ class CastCard extends StatelessWidget {
           Space(height: 8, width: 0),
           Text(
             cast.name,
-            style: context.textTheme.labelSmall,
+            style: TextStyleManager.labelSmall(context: context),
             maxLines: 1,
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,

@@ -120,9 +120,7 @@ class OnTheAirCarousel extends StatelessWidget {
           Space(height: 0, width: 4),
           Text(
             AppString.nowPlaying.toUpperCase(),
-            style: context.textTheme.bodySmall!.copyWith(
-              color: ColorManager.whiteColor,
-            ),
+            style: TextStyleManager.bodySmall(context: context),
           ),
         ],
       ),
@@ -135,7 +133,7 @@ class OnTheAirCarousel extends StatelessWidget {
       child: Text(
         title,
         textAlign: TextAlign.center,
-        style: context.textTheme.titleLarge,
+        style: TextStyleManager.titleLarge(context: context),
       ),
     );
   }

@@ -10,7 +10,7 @@ class CinemaTitle extends StatelessWidget {
     return Text(
       title,
       textAlign: TextAlign.center,
-      style: context.textTheme.titleLarge,
+      style: TextStyleManager.titleLarge(context: context),
     );
   }
 }

@@ -9,7 +9,8 @@ class CinemaDuration extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       _showDuration(duration ?? 0),
-      style: context.textTheme.labelSmall!.copyWith(
+      style: TextStyleManager.labelSmall(
+        context: context,
         color: ColorManager.greyColor,
       ),
     );

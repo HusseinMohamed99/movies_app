@@ -28,7 +28,7 @@ class _SearchBarItemState extends State<SearchBarItem> {
       controller: textController,
       cursorColor: ColorManager.whiteColor,
       cursorWidth: 1,
-      style: context.textTheme.labelMedium,
+      style: TextStyleManager.labelMedium(context: context),
       onChanged: (title) {
         context.read<SearchBloc>().add(GetSearchResultsEvent(title));
       },
@@ -62,7 +62,7 @@ class _SearchBarItemState extends State<SearchBarItem> {
           ),
         ),
         hintText: 'Search',
-        hintStyle: context.textTheme.labelMedium,
+        hintStyle: TextStyleManager.labelMedium(context: context),
       ),
     );
   }

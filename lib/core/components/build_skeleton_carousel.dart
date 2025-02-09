@@ -73,9 +73,7 @@ class BuildSkeletonCarousel extends StatelessWidget {
                         Space(height: 0, width: 4),
                         Text(
                           AppString.nowPlaying.toUpperCase(),
-                          style: context.textTheme.bodySmall!.copyWith(
-                            color: ColorManager.whiteColor,
-                          ),
+                          style: TextStyleManager.bodySmall(context: context),
                         ),
                       ],
                     ),
@@ -85,7 +83,7 @@ class BuildSkeletonCarousel extends StatelessWidget {
                     child: Text(
                       'Transformers',
                       textAlign: TextAlign.center,
-                      style: context.textTheme.titleLarge,
+                      style: TextStyleManager.titleLarge(context: context),
                     ),
                   ),
                 ],

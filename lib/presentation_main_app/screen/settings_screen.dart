@@ -85,7 +85,7 @@ class SettingsScreen extends StatelessWidget {
           Spacer(),
           Text(
             'Version: $appVersion',
-            style: context.textTheme.bodySmall,
+            style: TextStyleManager.bodySmall(context: context),
           ),
           Space(width: 0, height: 20),
         ],
@@ -148,7 +148,7 @@ class SettingCardItem extends StatelessWidget {
               Space(width: 35, height: 0),
               Text(
                 title,
-                style: context.textTheme.titleMedium,
+                style: TextStyleManager.titleMedium(context: context),
               ),
             ],
           ),

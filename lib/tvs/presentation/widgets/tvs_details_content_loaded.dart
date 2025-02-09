@@ -17,25 +17,28 @@ class TvsDetailsContentLoaded extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       initialIndex: 0,
-      child: SingleChildScrollView(
-        key: const Key('tvDetailScrollView'),
-        physics: const BouncingScrollPhysics(),
-        child: Column(
-          children: [
-            CinemaBackdropWidget(
-              backdropPath: state.tvsDetails?.backdropPath ?? '',
+      child: CustomScrollView(
+          key: const Key('tvDetailScrollView'),
+          physics: const BouncingScrollPhysics(),
+          slivers: [
+            SliverToBoxAdapter(
+              child: Column(
+                children: [
+                  CinemaBackdropWidget(
+                    backdropPath: state.tvsDetails?.backdropPath ?? '',
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: sections
+                        .map(
+                          (section) => PaddedSection(child: section),
+                        )
+                        .toList(),
+                  ),
+                ],
+              ),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: sections
-                  .map(
-                    (section) => PaddedSection(child: section),
-                  )
-                  .toList(),
-            ),
-          ],
-        ),
-      ),
+          ]),
     );
   }
 }

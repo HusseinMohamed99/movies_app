@@ -41,7 +41,7 @@ class SearchWidget extends StatelessWidget {
                       return Expanded(
                         child: Text(
                           'Please try again later',
-                          style: context.textTheme.titleMedium,
+                          style: TextStyleManager.titleMedium(context: context),
                         ),
                       );
                     case SearchRequestStatus.noResults:

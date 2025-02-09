@@ -13,7 +13,7 @@ class BuildReleaseDateChip extends StatelessWidget {
       ),
       child: Text(
         releaseDate.split('-')[0],
-        style: context.textTheme.labelSmall,
+        style: TextStyleManager.labelSmall(context: context),
       ),
     );
   }

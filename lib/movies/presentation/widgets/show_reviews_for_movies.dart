@@ -15,7 +15,7 @@ class ShowReviews extends StatelessWidget {
       children: [
         Text(
           AppString.reviews,
-          style: context.textTheme.titleMedium,
+          style: TextStyleManager.titleMedium(context: context),
         ),
         Space(height: 8, width: 0),
         ShowReviewsForMovies(moviesDetailsStates.moviesDetails?.reviews),

@@ -15,7 +15,7 @@ class BuildRating extends StatelessWidget {
         Space(width: 4, height: 0),
         Text(
           rating.toStringAsFixed(1),
-          style: context.textTheme.titleMedium,
+          style: TextStyleManager.titleMedium(context: context),
         ),
       ],
     );

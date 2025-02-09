@@ -10,7 +10,7 @@ class BuildErrorMessage extends StatelessWidget {
       child: Center(
         child: Text(
           errorMessage,
-          style: context.textTheme.labelLarge,
+          style: TextStyleManager.labelMedium(context: context),
         ),
       ),
     );

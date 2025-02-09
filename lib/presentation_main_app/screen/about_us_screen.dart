@@ -12,7 +12,7 @@ class AboutUsScreen extends StatelessWidget {
         elevation: 0,
         title: Text(
           AppString.appPolicy,
-          style: context.textTheme.headlineSmall,
+          style: TextStyleManager.headlineSmall(context: context),
         ),
         centerTitle: true,
       ),
@@ -62,7 +62,7 @@ class AboutUsScreen extends StatelessWidget {
                     children: [
                       Text(
                         AppString.aboutUsBody,
-                        style: context.textTheme.labelMedium,
+                        style: TextStyleManager.labelMedium(context: context),
                       ),
                     ],
                   ),

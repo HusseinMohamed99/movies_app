@@ -40,13 +40,13 @@ class ReviewCard extends StatelessWidget {
                     children: [
                       Text(
                         review.authorName,
-                        style: context.textTheme.labelMedium,
+                        style: TextStyleManager.labelMedium(context: context),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
                       Text(
                         review.authorUserName,
-                        style: context.textTheme.bodySmall,
+                        style: TextStyleManager.bodySmall(context: context),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -57,7 +57,7 @@ class ReviewCard extends StatelessWidget {
             ),
             Text(
               review.content,
-              style: context.textTheme.labelSmall,
+              style: TextStyleManager.labelSmall(context: context),
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
             ),
@@ -67,7 +67,7 @@ class ReviewCard extends StatelessWidget {
                 _getRatingBarIndicator(review.rating),
                 Text(
                   review.elapsedTime,
-                  style: context.textTheme.bodySmall,
+                  style: TextStyleManager.bodySmall(context: context),
                 ),
               ],
             )

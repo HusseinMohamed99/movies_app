@@ -43,7 +43,7 @@ class MovieSeeMoreScreen extends StatelessWidget {
       elevation: 0,
       title: Text(
         "$title Movies".toUpperCase(),
-        style: context.textTheme.labelMedium,
+        style: TextStyleManager.labelMedium(context: context),
       ),
       centerTitle: true,
     );
@@ -95,7 +95,7 @@ Widget _buildMovieInfo(BuildContext context, Movies movie) {
         movie.title,
         overflow: TextOverflow.ellipsis,
         maxLines: 1,
-        style: context.textTheme.titleMedium,
+        style: TextStyleManager.titleMedium(context: context),
       ),
       BuildReleaseDateChip(releaseDate: movie.releaseDate),
       BuildRating(rating: movie.voteAverage),
@@ -103,7 +103,7 @@ Widget _buildMovieInfo(BuildContext context, Movies movie) {
         movie.overview,
         maxLines: 2,
         overflow: TextOverflow.ellipsis,
-        style: context.textTheme.labelSmall,
+        style: TextStyleManager.labelSmall(context: context),
       ),
     ],
   );

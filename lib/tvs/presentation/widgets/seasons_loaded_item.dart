@@ -50,7 +50,7 @@ class SeasonsLoadedItem extends StatelessWidget {
           Expanded(
             child: Text(
               season.name,
-              style: context.textTheme.labelMedium,
+              style: TextStyleManager.labelMedium(context: context),
             ),
           ),
         ],

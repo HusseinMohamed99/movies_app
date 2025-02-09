@@ -15,7 +15,7 @@ class CinemaReleaseDate extends StatelessWidget {
       ),
       child: Text(
         releaseDate ?? '',
-        style: context.textTheme.labelMedium,
+        style: TextStyleManager.labelSmall(context: context),
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
       ),

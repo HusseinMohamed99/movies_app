@@ -35,7 +35,7 @@ class SeeMoreScreen extends StatelessWidget {
       elevation: 0,
       title: Text(
         name.toUpperCase(),
-        style: context.textTheme.labelMedium,
+        style: TextStyleManager.labelMedium(context: context),
       ),
       centerTitle: true,
     );
@@ -85,7 +85,7 @@ Widget _buildTvsInfo(BuildContext context, Tvs tvs) {
         tvs.name,
         overflow: TextOverflow.ellipsis,
         maxLines: 1,
-        style: context.textTheme.titleMedium,
+        style: TextStyleManager.titleMedium(context: context),
       ),
       Space(height: 5, width: 0),
       Row(
@@ -100,7 +100,7 @@ Widget _buildTvsInfo(BuildContext context, Tvs tvs) {
         tvs.overview,
         maxLines: 2,
         overflow: TextOverflow.ellipsis,
-        style: context.textTheme.labelSmall,
+        style: TextStyleManager.labelSmall(context: context),
       ),
     ],
   );
