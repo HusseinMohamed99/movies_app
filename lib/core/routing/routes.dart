@@ -5,6 +5,5 @@ class Routes {
   static const tvsScreen = '/TvsScreen';
   static const searchScreen = '/SearchScreen';
   static const settingsScreen = '/SettingsScreen';
-  static const aboutUsScreen = '/aboutUsScreen';
   static const supportScreen = '/SupportScreen';
 }

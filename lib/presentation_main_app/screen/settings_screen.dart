@@ -42,8 +42,8 @@ class SettingsScreen extends StatelessWidget {
           SettingCardItem(
             title: AppString.appPolicy,
             icon: Icons.info_outline,
-            onTap: () {
-              context.pushNamed(Routes.aboutUsScreen);
+            onTap: () async {
+              await appPolicy();
             },
           ),
           Space(width: 0, height: 8),
@@ -71,6 +71,15 @@ class SettingsScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> appPolicy() async {
+    String url =
+        'https://drive.google.com/file/d/1qIvMxdkYUaJXj01EwtQpXvd6xTgASDvP/view?usp=sharing';
+    if (!await launchUrl(Uri.parse(url),
+        mode: LaunchMode.externalApplication)) {
+      throw Exception('Could not launch $url');
+    }
   }
 }
 
