@@ -10,10 +10,7 @@ class RecommendationLoadedListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       scrollDirection: Axis.vertical,
-      padding: EdgeInsets.symmetric(
-        horizontal: 16.w,
-        vertical: 16.h,
-      ),
+      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
       itemCount: state.tvsRecommendation.length,
       itemBuilder: (context, index) {
         final recommendation = state.tvsRecommendation[index];
@@ -23,7 +20,7 @@ class RecommendationLoadedListView extends StatelessWidget {
         );
       },
       separatorBuilder: (context, index) {
-        return Space(height: 20.h, width: 0);
+        return Space(height: 20, width: 0);
       },
     );
   }

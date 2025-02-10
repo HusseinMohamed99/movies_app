@@ -48,14 +48,32 @@ class SeasonsLoadedItem extends StatelessWidget {
           ),
           Expanded(
             child: Center(
-              child: Text(
-                season.name,
-                style: TextStyleManager.labelMedium(context: context),
+              child: Column(
+                children: [
+                  SeasonInfo(seasonName: season.name),
+                  SeasonInfo(seasonName: '${season.episodeCount} Episodes'),
+                ],
               ),
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class SeasonInfo extends StatelessWidget {
+  const SeasonInfo({
+    super.key,
+    required this.seasonName,
+  });
+  final String seasonName;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      seasonName,
+      style: TextStyleManager.labelMedium(context: context),
     );
   }
 }

@@ -32,8 +32,8 @@ class RecommendationLoadedItem extends StatelessWidget {
           borderRadius: const BorderRadius.all(Radius.circular(8.0)).r,
           child: CachedImage(
             imageUrl: ApiConstance.imageURL(backdropPath),
-            width: 100.w,
-            height: 100.h,
+            width: 90.w,
+            height: 90.h,
             boxFit: BoxFit.cover,
           ),
         ),
