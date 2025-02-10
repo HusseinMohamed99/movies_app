@@ -12,7 +12,7 @@ class TvsDetailsContentLoaded extends StatelessWidget {
   Widget build(BuildContext context) {
     final sections = [
       SeriesDescription(state: state),
-      BuildTabBarSection(),
+      const BuildTabBarSection(),
     ];
     return DefaultTabController(
       length: 3,

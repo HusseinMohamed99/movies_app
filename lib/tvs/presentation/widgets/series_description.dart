@@ -18,12 +18,12 @@ class SeriesDescription extends StatelessWidget {
             state.tvsDetails?.overview != '')
           Column(
             children: [
-              Space(height: 16, width: 0),
+              const Space(height: 16, width: 0),
               CinemaOverviewAndGenres(
                 overview: state.tvsDetails?.overview ?? '',
                 genres: state.tvsDetails?.genres ??
                     [
-                      Genres(id: 0, name: ''),
+                      const Genres(id: 0, name: ''),
                     ],
               ),
             ],

@@ -14,7 +14,7 @@ class OnTheAirWidget extends StatelessWidget {
         } else if (state.onTheAirState == RequestState.error) {
           return BuildErrorMessage(errorMessage: state.onTheAirMessage);
         } else {
-          return OnTheAirCarousel(tvModel: []).skeletonize();
+          return const OnTheAirCarousel(tvModel: []).skeletonize();
         }
       },
     );

@@ -14,7 +14,7 @@ class SeriesInfoRow extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         PosterPathWidget(posterImage: state.tvsDetails?.posterPath ?? ''),
-        Space(width: 16, height: 0),
+        const Space(width: 16, height: 0),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -22,9 +22,9 @@ class SeriesInfoRow extends StatelessWidget {
               WatchTrailerButton(
                 trailerUrl: state.tvsDetails?.trailerUrl ?? '',
               ),
-              Space(height: 16, width: 0),
+              const Space(height: 16, width: 0),
               CinemaTitle(title: state.tvsDetails?.name ?? ''),
-              Space(height: 16, width: 0),
+              const Space(height: 16, width: 0),
               CinemaAttributes(
                 releaseDate: state.tvsDetails?.firstDate.split('-')[0] ?? '',
                 rate: state.tvsDetails?.voteAverage.toStringAsFixed(1) ?? '',

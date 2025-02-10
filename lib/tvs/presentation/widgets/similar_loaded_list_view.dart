@@ -30,7 +30,7 @@ class SimilarLoadedListView extends StatelessWidget {
           );
         },
         separatorBuilder: (context, index) {
-          return Space(height: 20, width: 0);
+          return const Space(height: 20, width: 0);
         },
       );
     }

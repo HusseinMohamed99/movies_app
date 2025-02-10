@@ -36,7 +36,7 @@ class SeasonSeriesLoaded extends StatelessWidget {
         final season = state.tvsDetails!.season[index];
         return SeasonsLoadedItem(season: season);
       },
-      separatorBuilder: (context, index) => Space(height: 20, width: 0),
+      separatorBuilder: (context, index) => const Space(height: 20, width: 0),
     );
   }
 }
