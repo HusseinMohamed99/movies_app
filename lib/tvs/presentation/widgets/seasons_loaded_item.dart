@@ -21,9 +21,8 @@ class SeasonsLoadedItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
-            flex: 2,
+            flex: 1,
             child: Container(
-              margin: EdgeInsets.only(right: 50.w),
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(10),
@@ -40,7 +39,7 @@ class SeasonsLoadedItem extends StatelessWidget {
                 ).r,
                 child: CachedImage(
                   imageUrl: ApiConstance.imageURL(season.posterPath),
-                  width: 100.w,
+                  width: 90.w,
                   height: 90.h,
                   boxFit: BoxFit.fill,
                 ),
@@ -48,9 +47,11 @@ class SeasonsLoadedItem extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Text(
-              season.name,
-              style: TextStyleManager.labelMedium(context: context),
+            child: Center(
+              child: Text(
+                season.name,
+                style: TextStyleManager.labelMedium(context: context),
+              ),
             ),
           ),
         ],

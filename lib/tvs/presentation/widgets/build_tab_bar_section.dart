@@ -21,7 +21,7 @@ class BuildTabBarSection extends StatelessWidget {
         ),
         SizedBox(
           width: double.maxFinite,
-          height: 500.h,
+          height: context.height * 0.5,
           child: TabBarView(
             children: [
               ShowSeasonSeries(),

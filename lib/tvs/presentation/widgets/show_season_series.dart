@@ -30,10 +30,7 @@ class SeasonSeriesLoaded extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      padding: EdgeInsets.symmetric(
-        horizontal: 16.w,
-        vertical: 16.h,
-      ),
+      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
       itemCount: state.tvsDetails?.season.length ?? 0,
       itemBuilder: (context, index) {
         final season = state.tvsDetails!.season[index];
