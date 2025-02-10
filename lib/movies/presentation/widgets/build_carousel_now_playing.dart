@@ -8,7 +8,7 @@ class NowPlayingCarousel extends StatelessWidget {
     return CarouselSlider(
       options: CarouselOptions(
         autoPlay: true,
-        height: context.height * 0.5,
+        height: context.height * 0.3,
         viewportFraction: 1.0,
         onPageChanged: (index, reason) {},
       ),
@@ -43,7 +43,7 @@ class BuildCarouselItem extends StatelessWidget {
             boxFit: BoxFit.fill,
             imageUrl: ApiConstance.imageURL(movie.backdropPath),
             width: double.infinity,
-            height: context.height * 0.5,
+            height: context.height * 0.3,
           ),
           BuildMovieInfo(movie: movie),
         ],
