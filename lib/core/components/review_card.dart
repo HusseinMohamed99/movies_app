@@ -1,12 +1,11 @@
 part of './../helpers/export_manager/export_manager.dart';
 
 class ReviewCard extends StatelessWidget {
-  final Review review;
-
   const ReviewCard({
     required this.review,
     super.key,
   });
+  final Review review;
 
   @override
   Widget build(BuildContext context) {

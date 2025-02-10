@@ -1,7 +1,6 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:movies_app/core/helpers/logs/app_logs.dart';
 
 class ExploreAllMoviesOrTvsPage extends StatefulWidget {
   const ExploreAllMoviesOrTvsPage({
@@ -45,7 +44,7 @@ class _ExploreAllMoviesOrTvsPageState extends State<ExploreAllMoviesOrTvsPage> {
         if (widget.addEvent != null) {
           widget.addEvent!(); // Trigger fetching more data
         } else {
-          log("No more data to fetch");
+          AppLogs.errorLog('No more data to fetch');
         }
       }
     }

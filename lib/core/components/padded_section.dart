@@ -1,8 +1,8 @@
 part of './../helpers/export_manager/export_manager.dart';
 
 class PaddedSection extends StatelessWidget {
-  final Widget child;
   const PaddedSection({super.key, required this.child});
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
