@@ -18,7 +18,11 @@ class ReviewContent extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.only(right: 6.w),
-                child: Avatar(avatarUrl: review.avatarUrl),
+                child: CachedImage(
+                  imageUrl: review.avatarUrl,
+                  width: 40.w,
+                  height: 40.h,
+                ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

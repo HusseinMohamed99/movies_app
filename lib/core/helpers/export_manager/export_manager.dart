@@ -180,7 +180,6 @@ part './../../../tvs/presentation/widgets/tvs_details_content_loaded.dart';
 part './../../components/cached_image.dart';
 part './../../components/cast_card.dart';
 part './../../components/cinema_details_title.dart';
-part './../../components/circle_avatar.dart';
 part './../../components/list_view_card.dart';
 part './../../components/loading_indicator.dart';
 part './../../components/padded_section.dart';
