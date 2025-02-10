@@ -20,22 +20,22 @@ class TvsDetailsModel extends TvDetails {
 
   factory TvsDetailsModel.fromJson(Map<String, dynamic> json) {
     return TvsDetailsModel(
-      overview: json["overview"],
-      id: json["id"],
-      name: json["name"],
-      voteAverage: json["vote_average"].toDouble(),
-      backdropPath: json["backdrop_path"] ?? '',
-      firstDate: json["first_air_date"],
-      lastDate: json["last_air_date"],
-      posterPath: json["poster_path"] ?? '',
+      overview: json['overview'],
+      id: json['id'],
+      name: json['name'],
+      voteAverage: json['vote_average'].toDouble(),
+      backdropPath: json['backdrop_path'] ?? '',
+      firstDate: json['first_air_date'],
+      lastDate: json['last_air_date'],
+      posterPath: json['poster_path'] ?? '',
       adult: json['adult'],
       numberOfSeason: json['number_of_seasons'],
       genres: List<TvGenresModel>.from(
-          json["genres"].map((e) => TvGenresModel.fromJson(e))),
+          json['genres'].map((e) => TvGenresModel.fromJson(e))),
       season: List<TvSeasonModel>.from(
-          json["seasons"].map((e) => TvSeasonModel.fromJson(e))),
+          json['seasons'].map((e) => TvSeasonModel.fromJson(e))),
       trailerUrl: getTrailerUrl(json),
-      runtime: json["episode_run_time"],
+      runtime: json['episode_run_time'],
     );
   }
 }

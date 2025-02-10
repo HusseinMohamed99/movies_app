@@ -1,21 +1,6 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class TvDetails extends Equatable {
-  final int id;
-  final String name;
-  final String overview;
-  final String backdropPath;
-  final String posterPath;
-  final double voteAverage;
-  final String firstDate;
-  final String lastDate;
-  final List<dynamic> runtime;
-  final List<Genres> genres;
-  final List<Season> season;
-  final bool adult;
-  final int numberOfSeason;
-  final String trailerUrl;
-
   const TvDetails({
     required this.overview,
     required this.id,
@@ -32,6 +17,20 @@ class TvDetails extends Equatable {
     required this.season,
     required this.trailerUrl,
   });
+  final int id;
+  final String name;
+  final String overview;
+  final String backdropPath;
+  final String posterPath;
+  final double voteAverage;
+  final String firstDate;
+  final String lastDate;
+  final List<dynamic> runtime;
+  final List<Genres> genres;
+  final List<Season> season;
+  final bool adult;
+  final int numberOfSeason;
+  final String trailerUrl;
 
   @override
   List<Object> get props => [

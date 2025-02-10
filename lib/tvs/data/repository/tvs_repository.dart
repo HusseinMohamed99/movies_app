@@ -1,9 +1,8 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class TvsRepository extends BaseTvRepository {
-  final BaseTvRemoteDataSource baseTvRemoteDataSource;
-
   TvsRepository({required this.baseTvRemoteDataSource});
+  final BaseTvRemoteDataSource baseTvRemoteDataSource;
 
   @override
   Future<Either<Failure, List<Tvs>>> getOnTheAirTv() async {

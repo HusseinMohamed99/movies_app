@@ -14,14 +14,14 @@ class TvModel extends Tvs {
 
   factory TvModel.fromJson(Map<String, dynamic> json) {
     return TvModel(
-      overview: json["overview"],
-      id: json["id"],
-      name: json["name"],
-      voteAverage: json["vote_average"].toDouble(),
-      genreIds: List<int>.from(json["genre_ids"].map((e) => e)),
-      backdropPath: json["backdrop_path"] ?? '',
-      firstAirDate: json["first_air_date"],
-      posterPath: json["poster_path"] ?? '',
+      overview: json['overview'],
+      id: json['id'],
+      name: json['name'],
+      voteAverage: json['vote_average'].toDouble(),
+      genreIds: List<int>.from(json['genre_ids'].map((e) => e)),
+      backdropPath: json['backdrop_path'] ?? '',
+      firstAirDate: json['first_air_date'],
+      posterPath: json['poster_path'] ?? '',
     );
   }
 }

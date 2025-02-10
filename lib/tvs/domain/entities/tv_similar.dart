@@ -1,16 +1,6 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class TvsSimilar extends Equatable {
-  final int id;
-  final String name;
-  final String overview;
-  final double voteAverage;
-  final String firstDate;
-  final List<int> genreIds;
-  final String? backdropPath;
-  final String? posterPath;
-  final bool adult;
-
   const TvsSimilar({
     required this.overview,
     required this.id,
@@ -22,6 +12,15 @@ class TvsSimilar extends Equatable {
     this.posterPath,
     required this.adult,
   });
+  final int id;
+  final String name;
+  final String overview;
+  final double voteAverage;
+  final String firstDate;
+  final List<int> genreIds;
+  final String? backdropPath;
+  final String? posterPath;
+  final bool adult;
 
   @override
   List<Object?> get props => [
