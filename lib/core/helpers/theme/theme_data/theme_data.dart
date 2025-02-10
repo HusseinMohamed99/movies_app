@@ -2,7 +2,7 @@ part of './../../export_manager/export_manager.dart';
 
 Map<AppTheme, ThemeData> getThemeData(BuildContext context) => {
       AppTheme.darkTheme: ThemeData(
-        scaffoldBackgroundColor: ColorManager.darkPrimary,
+        scaffoldBackgroundColor: ColorManager.charCoolColor,
         primaryColor: ColorManager.darkPrimary,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,

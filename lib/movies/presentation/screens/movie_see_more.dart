@@ -42,7 +42,7 @@ class MovieSeeMoreScreen extends StatelessWidget {
       backgroundColor: ColorManager.charCoolColor,
       elevation: 0,
       title: Text(
-        "$title Movies".toUpperCase(),
+        "$title Movies",
         style: TextStyleManager.labelMedium(context: context),
       ),
       centerTitle: true,
@@ -53,7 +53,7 @@ class MovieSeeMoreScreen extends StatelessWidget {
 Widget _buildMovieCard(BuildContext context, Movies movie) {
   return Container(
     decoration: BoxDecoration(
-      color: ColorManager.charCoolColor,
+      color: ColorManager.darkPrimary,
       borderRadius: BorderRadius.circular(10).r,
     ),
     padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
