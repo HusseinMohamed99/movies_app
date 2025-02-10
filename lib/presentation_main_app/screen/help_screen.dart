@@ -8,11 +8,11 @@ class SupportScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: ColorManager.darkPrimary,
+        backgroundColor: ColorManager.charCoolColor,
         elevation: 0,
         title: Text(
           AppString.contactSupport,
-          style: TextStyleManager.headlineSmall(context: context),
+          style: TextStyleManager.titleMedium(context: context),
         ),
         centerTitle: true,
       ),
@@ -24,14 +24,14 @@ class SupportScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(left: 8.w, top: 20.h, bottom: 20.h),
               child: CircleAvatar(
-                maxRadius: 93.r,
-                minRadius: 93.r,
+                maxRadius: 52.r,
+                minRadius: 52.r,
                 backgroundColor: ColorManager.primaryGreenColor,
                 child: CircleAvatar(
-                  maxRadius: 90.r,
-                  minRadius: 90.r,
+                  maxRadius: 50.r,
+                  minRadius: 50.r,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(95).r,
+                    borderRadius: BorderRadius.circular(50).r,
                     child: Image.asset(
                       Assets.imagesLogo,
                       fit: BoxFit.fill,
@@ -47,19 +47,16 @@ class SupportScreen extends StatelessWidget {
               url: 'mailto:hussein.mohmed1907@gmail.com',
               imageSvg: Assets.imagesGoogle,
             ),
-            Space(height: 10, width: 0),
             CardItem(
               title: 'GitHub',
               url: 'https://github.com/HusseinMohamed99',
               imageSvg: Assets.imagesGithub,
             ),
-            Space(height: 10, width: 0),
             CardItem(
               title: 'LinkedIn',
               url: 'https://www.linkedin.com/in/hussein99',
               imageSvg: Assets.imagesLinkedin,
             ),
-            Space(height: 10, width: 0),
             CardItem(
               title: 'Google play',
               url:
@@ -92,13 +89,14 @@ class CardItem extends StatelessWidget {
         );
       },
       child: Card(
+        margin: EdgeInsets.only(bottom: 16.h),
         color: ColorManager.charCoolColor,
         clipBehavior: Clip.antiAlias,
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(15).r),
-        elevation: 10,
+        elevation: 5,
         child: Container(
-          padding: const EdgeInsets.all(10).r,
+          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -107,15 +105,16 @@ class CardItem extends StatelessWidget {
                 backgroundColor: Colors.transparent,
                 child: SvgPicture.asset(
                   imageSvg,
+                  width: 30.w,
+                  height: 30.h,
                 ),
               ),
-              Space(
-                width: 35.w,
-                height: 0.h,
-              ),
-              Text(
-                title,
-                style: TextStyleManager.labelMedium(context: context),
+              Expanded(
+                child: Text(
+                  title,
+                  textAlign: TextAlign.center,
+                  style: TextStyleManager.titleSmall(context: context),
+                ),
               ),
             ],
           ),
