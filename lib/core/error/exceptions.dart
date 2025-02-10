@@ -2,16 +2,14 @@ part of './../helpers/export_manager/export_manager.dart';
 
 // for server
 class ServerException implements Exception {
-  final ErrorMessageModel errorMessageModel;
-
   ServerException({required this.errorMessageModel});
+  final ErrorMessageModel errorMessageModel;
 }
 
 // for local
 class LocalDatabaseException implements Exception {
-  final String message;
-
   const LocalDatabaseException({
     required this.message,
   });
+  final String message;
 }

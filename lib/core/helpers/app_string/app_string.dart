@@ -1,19 +1,19 @@
 class AppString {
   static const String appTitle = 'EGY DEAD';
   static const String nowPlaying = 'Now Playing';
-  static const String popular = "Popular";
-  static const String upcoming = "Upcoming";
+  static const String popular = 'Popular';
+  static const String upcoming = 'Upcoming';
   static const String seeMore = 'See More';
-  static const String topRated = "Top Rated";
-  static const String genres = "Genres";
-  static const String rating = "Rating";
-  static const String moreLikeThis = "More Like This";
-  static const String recommendations = "Recommendations";
-  static const String airingToday = "Airing Today";
-  static const String seasons = "Seasons";
-  static const String cast = "Cast";
-  static const String reviews = "Reviews";
-  static const String onAir = "On The Air";
+  static const String topRated = 'Top Rated';
+  static const String genres = 'Genres';
+  static const String rating = 'Rating';
+  static const String moreLikeThis = 'More Like This';
+  static const String recommendations = 'Recommendations';
+  static const String airingToday = 'Airing Today';
+  static const String seasons = 'Seasons';
+  static const String cast = 'Cast';
+  static const String reviews = 'Reviews';
+  static const String onAir = 'On The Air';
   static const String aboutUsBody = '''
 Welcome to EGY DEAD, a Flutter-based entertainment app for movie, TV show, and anime enthusiasts! By using EGY DEAD, you acknowledge and agree to the following terms and conditions. Please read carefully for a seamless experience.
 
@@ -76,9 +76,9 @@ For questions, suggestions, or support, please contact us at hussein.mohmed1907@
 
 By using EGY DEAD, you agree to this policy. Enjoy your journey into the world of entertainment!
  ''';
-  static const String appPolicy = "App Policy";
-  static const String contactSupport = "Contact Support";
-  static const String internetError = "Please check your internet connectivity";
-  static const String connectionFailed = "No Connection";
-  static const String checkInternetConnection = "Check Internet Connection";
+  static const String appPolicy = 'App Policy';
+  static const String contactSupport = 'Contact Support';
+  static const String internetError = 'Please check your internet connectivity';
+  static const String connectionFailed = 'No Connection';
+  static const String checkInternetConnection = 'Check Internet Connection';
 }

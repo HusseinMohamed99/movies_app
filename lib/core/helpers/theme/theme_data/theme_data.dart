@@ -15,7 +15,7 @@ Map<AppTheme, ThemeData> getThemeData(BuildContext context) => {
         bottomSheetTheme: BottomSheetThemeData(
           backgroundColor: ColorManager.greyDarkColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(18),
               topRight: Radius.circular(18),
             ).r,
@@ -40,7 +40,7 @@ Map<AppTheme, ThemeData> getThemeData(BuildContext context) => {
             size: 24.sp,
             color: ColorManager.whiteColor,
           ),
-          selectedLabelStyle: TextStyle(
+          selectedLabelStyle: const TextStyle(
             color: ColorManager.primaryGreenColor,
           ),
           selectedItemColor: ColorManager.primaryGreenColor,
