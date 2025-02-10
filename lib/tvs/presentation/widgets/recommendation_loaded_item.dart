@@ -3,10 +3,12 @@ part of './../../../core/helpers/export_manager/export_manager.dart';
 class RecommendationLoadedItem extends StatelessWidget {
   const RecommendationLoadedItem({
     super.key,
-    required this.tvsRecommendation,
+    required this.tvsDetailsStates,
+    required this.index,
   });
 
-  final TvsRecommendation tvsRecommendation;
+  final TvsDetailsStates tvsDetailsStates;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,8 @@ class RecommendationLoadedItem extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => TvsDetailsScreen(tvsID: tvsRecommendation.id),
+            builder: (context) => TvsDetailsScreen(
+                tvsID: tvsDetailsStates.tvsRecommendation[index].id),
           ),
         );
       },
@@ -26,15 +29,43 @@ class RecommendationLoadedItem extends StatelessWidget {
             color: ColorManager.whiteColor,
           ),
         ),
-        child: ClipRRect(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)).r,
-          child: CachedImage(
-            imageUrl:
-                ApiConstance.imageURL(tvsRecommendation.backdropPath ?? ''),
-            width: 90.w,
-            height: 90.h,
-            boxFit: BoxFit.cover,
-          ),
+        child: Row(
+          children: [
+            Expanded(
+              flex: 1,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(10),
+                  ).r,
+                  border: Border.all(
+                    color: ColorManager.whiteColor,
+                  ),
+                ),
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.all(Radius.circular(8.0)).r,
+                  child: CachedImage(
+                    imageUrl: ApiConstance.imageURL(tvsDetailsStates
+                            .tvsRecommendation[index].backdropPath ??
+                        ''),
+                    width: 90.w,
+                    height: 90.h,
+                    boxFit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Center(
+                child: Text(
+                  tvsDetailsStates.tvsRecommendation[index].name,
+                  textAlign: TextAlign.center,
+                  style: TextStyleManager.labelMedium(context: context),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

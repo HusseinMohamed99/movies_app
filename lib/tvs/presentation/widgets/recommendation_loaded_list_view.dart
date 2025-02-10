@@ -13,9 +13,9 @@ class RecommendationLoadedListView extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
       itemCount: state.tvsRecommendation.length,
       itemBuilder: (context, index) {
-        final recommendation = state.tvsRecommendation[index];
         return RecommendationLoadedItem(
-          tvsRecommendation: recommendation,
+          tvsDetailsStates: state,
+          index: index,
         );
       },
       separatorBuilder: (context, index) {

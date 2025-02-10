@@ -16,10 +16,9 @@ class SimilarLoadedListView extends StatelessWidget {
       ),
       itemCount: state.tvsSimilar.length,
       itemBuilder: (context, index) {
-        final similar = state.tvsSimilar[index];
         return RecommendationLoadedItem(
-          iD: similar.id,
-          backdropPath: similar.backdropPath ?? '',
+          tvsDetailsStates: state,
+          index: index,
         );
       },
       separatorBuilder: (context, index) {
