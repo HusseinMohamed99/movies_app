@@ -45,7 +45,6 @@ part '../../../movies/presentation/widgets/movie_recommendations_display.dart';
 part '../../../movies/presentation/widgets/now_playing_movies_widget.dart';
 part '../../../movies/presentation/widgets/upcoming_movies_widget.dart';
 part '../../../movies/presentation/widgets/watch_button_trailer.dart';
-part '../../components/build_skeleton_carousel.dart';
 part '../../components/cinema_attributes.dart';
 part '../../components/cinema_backdrop_widget.dart';
 part '../../components/cinema_duration.dart';
