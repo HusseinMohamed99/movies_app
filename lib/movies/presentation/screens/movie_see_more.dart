@@ -17,7 +17,7 @@ class MovieSeeMoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(context),
+      appBar: _buildAppBar(context, title: "$title Movies"),
       body: ExploreAllMoviesOrTvsPage(
         itemCount: movieList.length + (fetchData ? 0 : 1),
         itemBuilder: (context, index) {
@@ -33,19 +33,6 @@ class MovieSeeMoreScreen extends StatelessWidget {
           addEvent();
         },
       ),
-    );
-  }
-
-  AppBar _buildAppBar(BuildContext context) {
-    return AppBar(
-      automaticallyImplyLeading: false,
-      backgroundColor: ColorManager.charCoolColor,
-      elevation: 0,
-      title: Text(
-        "$title Movies",
-        style: TextStyleManager.labelMedium(context: context),
-      ),
-      centerTitle: true,
     );
   }
 }

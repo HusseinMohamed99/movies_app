@@ -199,3 +199,5 @@ part './../function/function.dart';
 part './../responsive/spacing.dart';
 part './../theme/style/color_manger.dart';
 part './../theme/theme_data/theme_data.dart';
+
+part './../../components/buid_app_bar.dart';
