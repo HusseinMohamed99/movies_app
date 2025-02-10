@@ -19,11 +19,11 @@ class CachedImage extends StatelessWidget {
     return CachedNetworkImage(
       imageUrl: imageUrl?.isNotEmpty == true
           ? imageUrl!
-          : "https://firebasestorage.googleapis.com/v0/b/egydead-df0d2.firebasestorage.app/o/no-data.png?alt=media&token=0eb352ef-76ec-4d9e-afce-80c58757b697",
+          : 'https://firebasestorage.googleapis.com/v0/b/egydead-df0d2.firebasestorage.app/o/no-data.png?alt=media&token=0eb352ef-76ec-4d9e-afce-80c58757b697',
       height: height?.h,
       width: width?.w,
       fit: boxFit ?? BoxFit.fitWidth,
-      placeholder: (_, __) => Center(
+      placeholder: (_, __) => const Center(
         child: SpinKitDoubleBounce(
           color: ColorManager.primaryGreenColor,
           duration: Duration(milliseconds: 3000),
