@@ -10,7 +10,7 @@ class NoResults extends StatelessWidget {
     return Expanded(
       child: Center(
         child: Text(
-          'No Results',
+          'No results found',
           style: TextStyleManager.labelMedium(context: context),
         ),
       ),

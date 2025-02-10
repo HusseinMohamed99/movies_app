@@ -34,16 +34,18 @@ class SearchWidget extends StatelessWidget {
                     case SearchRequestStatus.empty:
                       return const SearchText();
                     case SearchRequestStatus.loading:
-                      return const Expanded(child: LoadingIndicator());
-                    case SearchRequestStatus.loaded:
-                      return SearchGridView(results: state.searchResults);
-                    case SearchRequestStatus.error:
                       return Expanded(
-                        child: Text(
-                          'Please try again later',
-                          style: TextStyleManager.titleMedium(context: context),
+                        child: Skeletonizer(
+                          enabled: true,
+                          child: SearchGridView(results: state.searchResults),
                         ),
                       );
+                    case SearchRequestStatus.loaded:
+                      return Expanded(
+                        child: SearchGridView(results: state.searchResults),
+                      );
+                    case SearchRequestStatus.error:
+                      return BuildErrorMessage(errorMessage: state.message);
                     case SearchRequestStatus.noResults:
                       return const NoResults();
                   }

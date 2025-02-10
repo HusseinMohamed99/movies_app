@@ -10,7 +10,7 @@ class SearchText extends StatelessWidget {
     return Expanded(
       child: Center(
         child: Text(
-          'Search Text',
+          'Search for movies and TV shows',
           style: TextStyleManager.labelMedium(context: context),
           textAlign: TextAlign.center,
         ),

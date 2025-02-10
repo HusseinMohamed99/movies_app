@@ -10,20 +10,18 @@ class SearchGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: GridView.builder(
-        padding: EdgeInsets.symmetric(vertical: 12.h),
-        itemCount: results.length,
-        physics: const BouncingScrollPhysics(),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          crossAxisSpacing: 12,
-          childAspectRatio: 0.55,
-        ),
-        itemBuilder: (context, index) {
-          return GridViewCard(item: results[index]);
-        },
+    return GridView.builder(
+      padding: EdgeInsets.symmetric(vertical: 12.h),
+      itemCount: results.length,
+      physics: const BouncingScrollPhysics(),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 3,
+        crossAxisSpacing: 12,
+        childAspectRatio: 0.55,
       ),
+      itemBuilder: (context, index) {
+        return GridViewCard(item: results[index]);
+      },
     );
   }
 }
