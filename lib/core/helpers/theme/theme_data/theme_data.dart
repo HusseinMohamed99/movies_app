@@ -21,7 +21,7 @@ Map<AppTheme, ThemeData> getThemeData(BuildContext context) => {
             ).r,
           ),
         ),
-        textTheme: GoogleFonts.poppinsTextTheme().copyWith(
+        textTheme: TextTheme(
           bodySmall: buildTextStyle(
             context: context,
             fontSize: 8.sp,
@@ -40,7 +40,7 @@ Map<AppTheme, ThemeData> getThemeData(BuildContext context) => {
             size: 24.sp,
             color: ColorManager.whiteColor,
           ),
-          selectedLabelStyle: GoogleFonts.roboto(
+          selectedLabelStyle: TextStyle(
             color: ColorManager.primaryGreenColor,
           ),
           selectedItemColor: ColorManager.primaryGreenColor,

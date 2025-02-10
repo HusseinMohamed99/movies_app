@@ -87,8 +87,5 @@ class ShowSimilarMovies extends StatelessWidget {
         builder: (context) => MovieDetailsScreen(movieID: movieID),
       ),
     );
-    if (kDebugMode) {
-      print(movieID);
-    }
   }
 }

@@ -21,7 +21,6 @@ abstract class TextStyleManager {
     return TextStyle(
       color: ColorManager.whiteColor,
       fontSize: getResponsiveFontSize(context, fontSize: 24.sp),
-      fontFamily: GoogleFonts.poppinsTextTheme().toString(),
     );
   }
 
@@ -29,7 +28,6 @@ abstract class TextStyleManager {
     return TextStyle(
       color: ColorManager.whiteColor,
       fontSize: getResponsiveFontSize(context, fontSize: 22.sp),
-      fontFamily: GoogleFonts.poppinsTextTheme().toString(),
     );
   }
 
@@ -37,7 +35,6 @@ abstract class TextStyleManager {
     return TextStyle(
       color: ColorManager.whiteColor,
       fontSize: getResponsiveFontSize(context, fontSize: 16.sp),
-      fontFamily: GoogleFonts.poppinsTextTheme().toString(),
     );
   }
 
@@ -45,7 +42,6 @@ abstract class TextStyleManager {
     return TextStyle(
       color: color ?? ColorManager.whiteColor,
       fontSize: getResponsiveFontSize(context, fontSize: 14.sp),
-      fontFamily: GoogleFonts.poppinsTextTheme().toString(),
     );
   }
 
@@ -53,7 +49,6 @@ abstract class TextStyleManager {
     return TextStyle(
       color: ColorManager.whiteColor,
       fontSize: getResponsiveFontSize(context, fontSize: 12.sp),
-      fontFamily: GoogleFonts.poppinsTextTheme().toString(),
     );
   }
 
@@ -61,7 +56,6 @@ abstract class TextStyleManager {
     return TextStyle(
       color: color ?? ColorManager.whiteColor,
       fontSize: getResponsiveFontSize(context, fontSize: 11.sp),
-      fontFamily: GoogleFonts.poppinsTextTheme().toString(),
     );
   }
 
@@ -69,7 +63,6 @@ abstract class TextStyleManager {
     return TextStyle(
       color: ColorManager.whiteColor,
       fontSize: getResponsiveFontSize(context, fontSize: 8.sp),
-      fontFamily: GoogleFonts.poppinsTextTheme().toString(),
     );
   }
 }

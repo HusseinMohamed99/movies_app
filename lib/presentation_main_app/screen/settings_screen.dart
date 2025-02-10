@@ -34,9 +34,7 @@ class SettingsScreen extends StatelessWidget {
           ),
           Text(
             appName,
-            style: GoogleFonts.cairo(
-              textStyle: TextStyleManager.titleLarge(context: context),
-            ),
+            style: TextStyleManager.titleLarge(context: context),
           ),
           Space(width: 0, height: 30),
           SettingCardItem(

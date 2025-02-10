@@ -5,7 +5,7 @@ extension SkeletonizerExtension on Widget {
     return Skeletonizer(
       effect: ShimmerEffect(
         baseColor: ColorManager.charCoolColor, // Adjust colors as needed
-        highlightColor: ColorManager.charCoolColor.withOpacity(0.5),
+        highlightColor: ColorManager.charCoolColor,
         duration: const Duration(seconds: 1),
       ),
       switchAnimationConfig: SwitchAnimationConfig(
