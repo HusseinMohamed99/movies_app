@@ -53,7 +53,7 @@ part '../../components/cinema_rating.dart';
 part '../../components/cinema_release_date.dart';
 part '../../components/error_widget.dart';
 part '../../components/poster_path_widget.dart';
-part '../theme/style/responsive_font_size.dart';
+part '../responsive/responsive_font_size.dart';
 part '../theme/style/text_style.dart';
 part './../../../bloc_observer.dart';
 part './../../../egy_dead_app.dart';
@@ -200,3 +200,6 @@ part './../../services/services_locator.dart';
 part './../function/function.dart';
 part './../theme/style/color_manger.dart';
 part './../theme/theme_data/theme_data.dart';
+
+part './../responsive/spacing.dart';
+part './../../extensions/responsive_size_extension.dart';
