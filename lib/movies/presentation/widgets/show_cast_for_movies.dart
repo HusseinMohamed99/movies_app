@@ -29,22 +29,17 @@ class ShowCastForMovies extends StatelessWidget {
   final List<Cast>? cast;
   @override
   Widget build(BuildContext context) {
-    return (cast?.isNotEmpty ?? false)
-        ? SectionCastOrReviewsListView(
-            height: 140.h,
-            itemCount: cast?.length ?? 0,
-            itemBuilder: (context, index) => CastCard(
-              cast: cast?[index] ??
-                  Cast(
-                    name: '',
-                    profileUrl: '',
-                    gender: 0,
-                  ),
+    return SectionCastOrReviewsListView(
+      height: 140.h,
+      itemCount: cast?.length ?? 0,
+      itemBuilder: (context, index) => CastCard(
+        cast: cast?[index] ??
+            Cast(
+              name: '',
+              profileUrl: '',
+              gender: 0,
             ),
-          )
-        : NoDataFoundWidget(
-            message: 'No cast found.',
-            imagePath: Assets.imagesNoData,
-          );
+      ),
+    );
   }
 }

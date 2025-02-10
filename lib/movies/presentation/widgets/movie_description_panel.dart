@@ -31,8 +31,10 @@ class MovieDetailsDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     final sections = [
       FilmDescription(moviesDetailsStates: moviesDetailsStates),
-      ShowCast(moviesDetailsStates: moviesDetailsStates),
-      ShowReviews(moviesDetailsStates: moviesDetailsStates),
+      if (moviesDetailsStates.moviesDetails?.cast?.isNotEmpty ?? false)
+        ShowCast(moviesDetailsStates: moviesDetailsStates),
+      if (moviesDetailsStates.moviesDetails?.reviews?.isNotEmpty ?? false)
+        ShowReviews(moviesDetailsStates: moviesDetailsStates),
       ShowRecommendations(moviesDetailsStates: moviesDetailsStates),
       ShowSimilar(moviesDetailsStates: moviesDetailsStates),
     ];

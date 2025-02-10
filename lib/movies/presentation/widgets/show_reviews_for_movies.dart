@@ -32,25 +32,20 @@ class ShowReviewsForMovies extends StatelessWidget {
   final List<Review>? reviews;
   @override
   Widget build(BuildContext context) {
-    return (reviews?.isNotEmpty ?? false)
-        ? SectionCastOrReviewsListView(
-            height: 150.h,
-            itemCount: reviews?.length ?? 0,
-            itemBuilder: (context, index) => ReviewCard(
-              review: reviews?[index] ??
-                  Review(
-                    authorName: '',
-                    content: '',
-                    rating: 0.0,
-                    elapsedTime: '',
-                    avatarUrl: '',
-                    authorUserName: '',
-                  ),
+    return SectionCastOrReviewsListView(
+      height: 150.h,
+      itemCount: reviews?.length ?? 0,
+      itemBuilder: (context, index) => ReviewCard(
+        review: reviews?[index] ??
+            Review(
+              authorName: '',
+              content: '',
+              rating: 0.0,
+              elapsedTime: '',
+              avatarUrl: '',
+              authorUserName: '',
             ),
-          )
-        : NoDataFoundWidget(
-            message: 'No reviews found.',
-            imagePath: Assets.imagesNoData,
-          );
+      ),
+    );
   }
 }
