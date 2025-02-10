@@ -14,8 +14,7 @@ class NowPlayingWidget extends StatelessWidget {
         } else if (state.nowPlayingState == RequestState.error) {
           return BuildErrorMessage(errorMessage: state.nowPlayingMessage);
         } else {
-          return Skeletonizer(
-              enabled: true, child: NowPlayingCarousel(movies: []));
+          return NowPlayingCarousel(movies: []).skeletonize();
         }
       },
     );
