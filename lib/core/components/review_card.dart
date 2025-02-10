@@ -12,10 +12,10 @@ class ReviewCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // showCustomBottomSheet(
-        //   context,
-        //   ReviewContent(review: review),
-        // );
+        showCustomBottomSheet(
+          context,
+          ReviewContent(review: review),
+        );
       },
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
