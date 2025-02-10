@@ -34,7 +34,7 @@ class SeeMoreScreen extends StatelessWidget {
       backgroundColor: ColorManager.charCoolColor,
       elevation: 0,
       title: Text(
-        name.toUpperCase(),
+        "$name Series",
         style: TextStyleManager.labelMedium(context: context),
       ),
       centerTitle: true,
@@ -45,7 +45,7 @@ class SeeMoreScreen extends StatelessWidget {
 Widget _buildTvsCard(BuildContext context, Tvs tvs) {
   return Container(
     decoration: BoxDecoration(
-      color: ColorManager.charCoolColor,
+      color: ColorManager.darkPrimary,
       borderRadius: BorderRadius.circular(10).r,
     ),
     padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
@@ -79,7 +79,9 @@ Widget _buildTvsImage(Tvs tvs) {
 
 Widget _buildTvsInfo(BuildContext context, Tvs tvs) {
   return Column(
+    spacing: 10.h,
     crossAxisAlignment: CrossAxisAlignment.start,
+    mainAxisAlignment: MainAxisAlignment.start,
     children: [
       Text(
         tvs.name,
@@ -87,15 +89,8 @@ Widget _buildTvsInfo(BuildContext context, Tvs tvs) {
         maxLines: 1,
         style: TextStyleManager.titleMedium(context: context),
       ),
-      Space(height: 5, width: 0),
-      Row(
-        children: [
-          BuildReleaseDateChip(releaseDate: tvs.firstAirDate),
-          Space(width: 16, height: 0),
-          BuildRating(rating: tvs.voteAverage),
-        ],
-      ),
-      Space(height: 10, width: 0),
+      BuildReleaseDateChip(releaseDate: tvs.firstAirDate),
+      BuildRating(rating: tvs.voteAverage),
       Text(
         tvs.overview,
         maxLines: 2,
