@@ -11,7 +11,14 @@ class HorizontalListViewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(right: 8.w),
+      // padding: EdgeInsets.only(right: 8.w),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(8.0).r),
+        border: Border.all(
+          color: ColorManager.whiteColor,
+          width: 1.0,
+        ),
+      ),
       child: InkWell(
         onTap: () {
           navigateToMovieDetails(context, movies?.id ?? 0);
