@@ -1,12 +1,6 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class TvsBloc extends Bloc<TvsEvent, TvsStates> {
-  final GetOnTheAirTvsUseCase getOnTheAirTvsUseCase;
-  final GetAiringTodayTvsUseCase getAiringTodayTvsUseCase;
-
-  final GetPopularTvsUseCase getPopularTvsUseCase;
-  final GetTopRatedTvsUseCase getTopRatedTvsUseCase;
-
   TvsBloc(this.getOnTheAirTvsUseCase, this.getAiringTodayTvsUseCase,
       this.getPopularTvsUseCase, this.getTopRatedTvsUseCase)
       : super(const TvsStates()) {
@@ -17,6 +11,11 @@ class TvsBloc extends Bloc<TvsEvent, TvsStates> {
 
     on<GetTopRatedTvsEvent>(_getTopRatedTvs);
   }
+  final GetOnTheAirTvsUseCase getOnTheAirTvsUseCase;
+  final GetAiringTodayTvsUseCase getAiringTodayTvsUseCase;
+
+  final GetPopularTvsUseCase getPopularTvsUseCase;
+  final GetTopRatedTvsUseCase getTopRatedTvsUseCase;
 
   FutureOr<void> _getOnTheAirTvs(
       GetOnTheAirTvsEvent event, Emitter<TvsStates> emit) async {

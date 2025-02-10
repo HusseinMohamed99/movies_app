@@ -1,11 +1,6 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class TvsDetailsBloc extends Bloc<TvsDetailsEvent, TvsDetailsStates> {
-  final GetTvsDetailsUseCase getTvsDetailsUseCase;
-
-  final GetTvRecommendationUseCase getTvsRecommendationsUseCase;
-  final GetTvSimilarUseCase getTvsSimilarUseCase;
-
   TvsDetailsBloc(this.getTvsDetailsUseCase, this.getTvsRecommendationsUseCase,
       this.getTvsSimilarUseCase)
       : super(const TvsDetailsStates()) {
@@ -13,6 +8,10 @@ class TvsDetailsBloc extends Bloc<TvsDetailsEvent, TvsDetailsStates> {
     on<GetTvsRecommendationEvent>(_getTvsRecommendations);
     on<GetTvsSimilarEvent>(_getTvsSimilar);
   }
+  final GetTvsDetailsUseCase getTvsDetailsUseCase;
+
+  final GetTvRecommendationUseCase getTvsRecommendationsUseCase;
+  final GetTvSimilarUseCase getTvsSimilarUseCase;
 
   FutureOr<void> _getTvsDetails(
       GetTvsDetailsEvent event, Emitter<TvsDetailsStates> emit) async {

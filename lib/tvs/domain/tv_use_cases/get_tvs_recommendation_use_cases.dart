@@ -2,9 +2,8 @@ part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class GetTvRecommendationUseCase extends GenericUseCase<List<TvsRecommendation>,
     TvRecommendationParameters> {
-  final BaseTvRepository baseTvRepository;
-
   GetTvRecommendationUseCase({required this.baseTvRepository});
+  final BaseTvRepository baseTvRepository;
 
   @override
   Future<Either<Failure, List<TvsRecommendation>>> call(
@@ -14,9 +13,8 @@ class GetTvRecommendationUseCase extends GenericUseCase<List<TvsRecommendation>,
 }
 
 class TvRecommendationParameters extends Equatable {
-  final int tvID;
-
   const TvRecommendationParameters({required this.tvID});
+  final int tvID;
 
   @override
   List<Object> get props => [tvID];

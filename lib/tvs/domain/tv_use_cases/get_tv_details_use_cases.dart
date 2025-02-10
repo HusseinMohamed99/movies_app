@@ -2,9 +2,8 @@ part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class GetTvsDetailsUseCase
     extends GenericUseCase<TvDetails, TvsDetailsParameters> {
-  final BaseTvRepository baseTvsRepository;
-
   GetTvsDetailsUseCase({required this.baseTvsRepository});
+  final BaseTvRepository baseTvsRepository;
 
   @override
   Future<Either<Failure, TvDetails>> call(
@@ -14,9 +13,8 @@ class GetTvsDetailsUseCase
 }
 
 class TvsDetailsParameters extends Equatable {
-  final int tvsID;
-
   const TvsDetailsParameters({required this.tvsID});
+  final int tvsID;
 
   @override
   List<Object> get props => [tvsID];
