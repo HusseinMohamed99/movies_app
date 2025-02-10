@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["allprojects", "Cupertino", "subprojects", "Xlint"]
+  "cSpell.words": ["allprojects", "Cupertino", "subprojects", "Xlint"],
+  "postman.settings.dotenv-detection-notification-visibility": false
 }
