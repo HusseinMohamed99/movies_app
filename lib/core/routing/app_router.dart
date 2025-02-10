@@ -39,6 +39,14 @@ class AppRouters {
         return MaterialPageRoute(
           builder: (_) => const SettingsScreen(),
         );
+      case Routes.aboutUsScreen:
+        return MaterialPageRoute(
+          builder: (_) => const AboutUsScreen(),
+        );
+      case Routes.supportScreen:
+        return MaterialPageRoute(
+          builder: (_) => const SupportScreen(),
+        );
     }
     return null;
   }

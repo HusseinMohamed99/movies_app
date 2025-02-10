@@ -17,19 +17,16 @@ class SettingsScreen extends StatelessWidget {
               bottom: 20.h,
             ),
             child: CircleAvatar(
-              maxRadius: 93.r,
-              minRadius: 93.r,
+              maxRadius: 52.r,
+              minRadius: 52.r,
               backgroundColor: ColorManager.primaryGreenColor,
               child: CircleAvatar(
-                maxRadius: 90.r,
-                minRadius: 90.r,
+                maxRadius: 50.r,
+                minRadius: 50.r,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(95).r,
+                  borderRadius: BorderRadius.circular(50).r,
                   child: Image.asset(
                     Assets.imagesLogo,
-                    fit: BoxFit.fitHeight,
-                    width: double.infinity,
-                    height: 200.h,
                   ),
                 ),
               ),
@@ -37,11 +34,8 @@ class SettingsScreen extends StatelessWidget {
           ),
           Text(
             appName,
-            style: GoogleFonts.pacifico(
-              textStyle: TextStyle(
-                color: ColorManager.whiteColor,
-                fontSize: getResponsiveFontSize(context, fontSize: 25),
-              ),
+            style: GoogleFonts.cairo(
+              textStyle: TextStyleManager.titleLarge(context: context),
             ),
           ),
           Space(width: 0, height: 30),
@@ -49,14 +43,7 @@ class SettingsScreen extends StatelessWidget {
             title: AppString.appPolicy,
             icon: Icons.info_outline,
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (BuildContext context) {
-                    return const AboutUsScreen();
-                  },
-                ),
-              );
+              context.pushNamed(Routes.aboutUsScreen);
             },
           ),
           Space(width: 0, height: 8),
@@ -64,14 +51,7 @@ class SettingsScreen extends StatelessWidget {
             title: AppString.contactSupport,
             icon: Icons.help_outline,
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (BuildContext context) {
-                    return const SupportScreen();
-                  },
-                ),
-              );
+              context.pushNamed(Routes.supportScreen);
             },
           ),
           Space(width: 0, height: 8),
@@ -85,7 +65,7 @@ class SettingsScreen extends StatelessWidget {
           Spacer(),
           Text(
             'Version: $appVersion',
-            style: TextStyleManager.bodySmall(context: context),
+            style: TextStyleManager.labelSmall(context: context),
           ),
           Space(width: 0, height: 20),
         ],
@@ -121,16 +101,16 @@ class SettingCardItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: EdgeInsets.only(left: 16.w, right: 16.w, bottom: 8.h),
-      color: ColorManager.charCoolColor,
-      clipBehavior: Clip.antiAlias,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15).r,
-      ),
-      elevation: 10,
-      child: GestureDetector(
-        onTap: onTap,
+    return GestureDetector(
+      onTap: onTap,
+      child: Card(
+        margin: EdgeInsets.only(left: 16.w, right: 16.w, bottom: 8.h),
+        color: ColorManager.charCoolColor,
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15).r,
+        ),
+        elevation: 5,
         child: Container(
           padding: const EdgeInsets.all(10).r,
           child: Row(
