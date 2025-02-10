@@ -1,12 +1,6 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class MoviesBloc extends Bloc<MoviesEvent, MoviesStates> {
-  final GetNowPlayingMoviesUseCase getNowPlayingMoviesUseCase;
-  final GetUpcomingMoviesUseCase getUpcomingMoviesUseCase;
-  final GetAllPopularMoviesUseCase allPopularMoviesUseCase;
-  final GetAllTopRatedMoviesUseCase allTopRatedMoviesUseCase;
-  final GetAllUpcomingMoviesUseCase allUpcomingMoviesUseCase;
-
   MoviesBloc(
       this.getNowPlayingMoviesUseCase,
       this.getUpcomingMoviesUseCase,
@@ -22,6 +16,11 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesStates> {
     on<FetchMoreTopRatedMoviesEvent>(_fetchMoreTopRatedMovies);
     on<FetchMoreUpcomingMoviesEvent>(_fetchMoreUpcomingMovies);
   }
+  final GetNowPlayingMoviesUseCase getNowPlayingMoviesUseCase;
+  final GetUpcomingMoviesUseCase getUpcomingMoviesUseCase;
+  final GetAllPopularMoviesUseCase allPopularMoviesUseCase;
+  final GetAllTopRatedMoviesUseCase allTopRatedMoviesUseCase;
+  final GetAllUpcomingMoviesUseCase allUpcomingMoviesUseCase;
 
   FutureOr<void> _getNowPlayingMovies(
       GetNowPlayingMoviesEvent event, Emitter<MoviesStates> emit) async {

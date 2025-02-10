@@ -1,9 +1,8 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class MoviesRepository extends MovieDataRepository {
-  final RemoteMovieDataSource remoteMovieDataSource;
-
   MoviesRepository({required this.remoteMovieDataSource});
+  final RemoteMovieDataSource remoteMovieDataSource;
 
   @override
   Future<Either<Failure, List<Movies>>> getNowPlayingMovies() async {

@@ -1,16 +1,6 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class MoviesRecommendation extends Equatable {
-  final int id;
-  final String title;
-  final String overview;
-  final double voteAverage;
-  final String releaseDate;
-  final List<int> genreIds;
-  final String? backdropPath;
-  final String? posterPath;
-  final bool adult;
-
   const MoviesRecommendation({
     required this.overview,
     required this.id,
@@ -22,6 +12,15 @@ class MoviesRecommendation extends Equatable {
     this.posterPath,
     required this.adult,
   });
+  final int id;
+  final String title;
+  final String overview;
+  final double voteAverage;
+  final String releaseDate;
+  final List<int> genreIds;
+  final String? backdropPath;
+  final String? posterPath;
+  final bool adult;
 
   @override
   List<Object?> get props => [
