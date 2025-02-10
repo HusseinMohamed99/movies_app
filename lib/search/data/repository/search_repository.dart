@@ -1,9 +1,8 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class SearchRepositoryImpl extends SearchRepository {
-  final SearchRemoteDataSource baseSearchRemoteDataSource;
-
   SearchRepositoryImpl({required this.baseSearchRemoteDataSource});
+  final SearchRemoteDataSource baseSearchRemoteDataSource;
 
   @override
   Future<Either<Failure, List<SearchResultItem>>> search(String title) async {

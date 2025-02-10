@@ -14,14 +14,14 @@ class TvsRecommendationModel extends TvsRecommendation {
 
   factory TvsRecommendationModel.fromJson(Map<String, dynamic> json) {
     return TvsRecommendationModel(
-      overview: json["overview"],
-      id: json["id"],
-      name: json["name"],
-      voteAverage: json["vote_average"].toDouble(),
-      genreIds: List<int>.from(json["genre_ids"].map((e) => e)),
-      backdropPath: json["backdrop_path"] ?? '',
-      firstDate: json["first_air_date"],
-      posterPath: json["poster_path"] ?? '',
+      overview: json['overview'],
+      id: json['id'],
+      name: json['name'],
+      voteAverage: json['vote_average'].toDouble(),
+      genreIds: List<int>.from(json['genre_ids'].map((e) => e)),
+      backdropPath: json['backdrop_path'] ?? '',
+      firstDate: json['first_air_date'],
+      posterPath: json['poster_path'] ?? '',
       adult: json['adult'],
     );
   }

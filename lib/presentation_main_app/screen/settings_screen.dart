@@ -36,7 +36,7 @@ class SettingsScreen extends StatelessWidget {
             appName,
             style: TextStyleManager.titleLarge(context: context),
           ),
-          Space(width: 0, height: 30),
+          const Space(width: 0, height: 30),
           SettingCardItem(
             title: AppString.appPolicy,
             icon: Icons.info_outline,
@@ -44,7 +44,7 @@ class SettingsScreen extends StatelessWidget {
               await appPolicy();
             },
           ),
-          Space(width: 0, height: 8),
+          const Space(width: 0, height: 8),
           SettingCardItem(
             title: AppString.contactSupport,
             icon: Icons.help_outline,
@@ -52,20 +52,18 @@ class SettingsScreen extends StatelessWidget {
               context.pushNamed(Routes.supportScreen);
             },
           ),
-          Space(width: 0, height: 8),
-          SettingCardItem(
+          const Space(width: 0, height: 8),
+          const SettingCardItem(
             title: AppString.rating,
             icon: Icons.star_outline,
-            onTap: () {
-              goToApplicationOnPlayStore();
-            },
+            onTap: goToApplicationOnPlayStore,
           ),
-          Spacer(),
+          const Spacer(),
           Text(
             'Version: $appVersion',
             style: TextStyleManager.labelSmall(context: context),
           ),
-          Space(width: 0, height: 20),
+          const Space(width: 0, height: 20),
         ],
       ),
     );
@@ -132,7 +130,7 @@ class SettingCardItem extends StatelessWidget {
                   color: ColorManager.primaryGreenColor,
                 ),
               ),
-              Space(width: 35, height: 0),
+              const Space(width: 35, height: 0),
               Text(
                 title,
                 style: TextStyleManager.titleMedium(context: context),

@@ -22,7 +22,7 @@ class TvRemoteDataSource extends BaseTvRemoteDataSource {
   Future<List<TvModel>> getOnTheAirTvs() async {
     final response = await Dio().get(ApiConstance.onTheAirTvPath);
     if (response.statusCode == 200) {
-      return List<TvModel>.from((response.data["results"] as List).map(
+      return List<TvModel>.from((response.data['results'] as List).map(
         (e) => TvModel.fromJson(e),
       ));
     } else {
@@ -36,7 +36,7 @@ class TvRemoteDataSource extends BaseTvRemoteDataSource {
   Future<List<TvModel>> getAiringTodayTvs() async {
     final response = await Dio().get(ApiConstance.airingTodayTvPath);
     if (response.statusCode == 200) {
-      return List<TvModel>.from((response.data["results"] as List).map(
+      return List<TvModel>.from((response.data['results'] as List).map(
         (e) => TvModel.fromJson(e),
       ));
     } else {
@@ -50,7 +50,7 @@ class TvRemoteDataSource extends BaseTvRemoteDataSource {
   Future<List<TvModel>> getPopularTvs() async {
     final response = await Dio().get(ApiConstance.popularTvsPath);
     if (response.statusCode == 200) {
-      return List<TvModel>.from((response.data["results"] as List).map(
+      return List<TvModel>.from((response.data['results'] as List).map(
         (e) => TvModel.fromJson(e),
       ));
     } else {
@@ -64,7 +64,7 @@ class TvRemoteDataSource extends BaseTvRemoteDataSource {
   Future<List<TvModel>> getTopRatedTvs() async {
     final response = await Dio().get(ApiConstance.topRatedTvsPath);
     if (response.statusCode == 200) {
-      return List<TvModel>.from((response.data["results"] as List).map(
+      return List<TvModel>.from((response.data['results'] as List).map(
         (e) => TvModel.fromJson(e),
       ));
     } else {
@@ -94,7 +94,7 @@ class TvRemoteDataSource extends BaseTvRemoteDataSource {
         await Dio().get(ApiConstance.tvRecommendationPath(parameters.tvID));
     if (response.statusCode == 200) {
       return List<TvsRecommendationModel>.from(
-          (response.data["results"] as List).map(
+          (response.data['results'] as List).map(
         (e) => TvsRecommendationModel.fromJson(e),
       ));
     } else {
@@ -110,7 +110,7 @@ class TvRemoteDataSource extends BaseTvRemoteDataSource {
     final response =
         await Dio().get(ApiConstance.tvSimilarPath(parameters.tvID));
     if (response.statusCode == 200) {
-      return List<TvsSimilarModel>.from((response.data["results"] as List).map(
+      return List<TvsSimilarModel>.from((response.data['results'] as List).map(
         (e) => TvsSimilarModel.fromJson(e),
       ));
     } else {

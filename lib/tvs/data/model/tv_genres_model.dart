@@ -8,8 +8,8 @@ class TvGenresModel extends Genres {
 
   factory TvGenresModel.fromJson(Map<String, dynamic> json) {
     return TvGenresModel(
-      id: json["id"],
-      name: json["name"],
+      id: json['id'],
+      name: json['name'],
     );
   }
 }
