@@ -2,10 +2,6 @@ part of './../helpers/export_manager/export_manager.dart';
 
 class AppRouters {
   Route? generateRoute(RouteSettings settings) {
-    // This arguments to be passed in any screen like this ( arguments as ClassName )
-
-    /// final arguments = settings.arguments;
-
     switch (settings.name) {
       case Routes.homePage:
         return MaterialPageRoute(
@@ -17,7 +13,7 @@ class AppRouters {
 
       case Routes.mainScreen:
         return MaterialPageRoute(
-          builder: (_) => MainScreen(),
+          builder: (_) => const MainScreen(),
         );
 
       case Routes.moviesScreen:
