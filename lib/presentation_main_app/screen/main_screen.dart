@@ -63,11 +63,11 @@ class _MainScreenState extends State<MainScreen> {
                 showSelectedLabels: true,
                 showUnselectedLabels: false,
                 items: [
-                  bottomNavigationBarItem(icon: Icons.movie, label: "Movies"),
-                  bottomNavigationBarItem(icon: Icons.tv, label: "Tvs"),
-                  bottomNavigationBarItem(icon: Icons.search, label: "Search"),
+                  bottomNavigationBarItem(icon: Icons.movie, label: 'Movies'),
+                  bottomNavigationBarItem(icon: Icons.tv, label: 'Tvs'),
+                  bottomNavigationBarItem(icon: Icons.search, label: 'Search'),
                   bottomNavigationBarItem(
-                      icon: Icons.settings, label: "Settings"),
+                      icon: Icons.settings, label: 'Settings'),
                 ],
               ),
             ),

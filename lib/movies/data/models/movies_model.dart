@@ -14,14 +14,14 @@ class MovieModel extends Movies {
 
   factory MovieModel.fromJson(Map<String, dynamic> json) {
     return MovieModel(
-      overview: json["overview"],
-      id: json["id"],
-      title: json["title"],
-      voteAverage: json["vote_average"].toDouble(),
-      genreIds: List<int>.from(json["genre_ids"].map((e) => e)),
-      backdropPath: json["backdrop_path"] ?? '',
+      overview: json['overview'],
+      id: json['id'],
+      title: json['title'],
+      voteAverage: json['vote_average'].toDouble(),
+      genreIds: List<int>.from(json['genre_ids'].map((e) => e)),
+      backdropPath: json['backdrop_path'] ?? '',
       releaseDate: getDate(json['release_date']),
-      posterPath: json["poster_path"] ?? '',
+      posterPath: json['poster_path'] ?? '',
       adult: json['adult'],
     );
   }

@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
 
                 return BlocProvider(
                   create: (context) => sl<MainBloc>(),
-                  child: MainScreen(),
+                  child: const MainScreen(),
                 ); // Temporary loading indicator while navigating
               } else if (state == InternetState.lost) {
                 return SvgPicture.asset(Assets.imagesError);

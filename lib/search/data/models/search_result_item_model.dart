@@ -10,10 +10,10 @@ class SearchResultItemModel extends SearchResultItem {
 
   factory SearchResultItemModel.fromJson(Map<String, dynamic> json) {
     return SearchResultItemModel(
-      id: json["id"],
-      posterUrl: json["poster_path"] ?? '',
-      title: json["title"] ?? json["name"],
-      isMovie: json["media_type"] == "movie",
+      id: json['id'],
+      posterUrl: json['poster_path'] ?? '',
+      title: json['title'] ?? json['name'],
+      isMovie: json['media_type'] == 'movie',
     );
   }
 }
