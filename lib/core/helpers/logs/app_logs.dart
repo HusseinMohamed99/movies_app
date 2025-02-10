@@ -1,59 +1,66 @@
-// part of '../export_manager/export_manager.dart';
+import 'dart:developer';
 
-// class AppLogs {
-//   AppLogs._();
+import 'package:flutter/foundation.dart';
 
-//   // Set to true to enable logging in release mode
-//   static const bool logInRelease = true;
+class AppLogs {
+  AppLogs._();
 
-//   static String get _getCurrentTime {
-//     final DateTime now = DateTime.now();
-//     return '${now.minute}:${now.second}:${now.millisecond}';
-//   }
+  static String get _getCurrentTime {
+    final DateTime now = DateTime.now();
+    return '${now.minute}:${now.second}:${now.millisecond}';
+  }
 
-//   static bool get _shouldLog => kDebugMode || logInRelease;
+//*Success
+  static void successLog(String message, [String tag = 'Success']) {
+    if (kDebugMode) {
+      log(
+        '\x1B[32m$tag ✅✅✅✅✅✅✅✅✅✅✅✅✅:  $message\x1B[0m',
+        name: 'Success $_getCurrentTime',
+        level: 0,
+      );
+    }
+  }
 
-//   //* Success
-//   static void successLog(String message, [String tag = 'Success']) {
-//     if (_shouldLog) {
-//       log(
-//         '\x1B[32m$tag ✅✅✅✅✅✅✅✅✅✅✅✅✅:  $message\x1B[0m',
-//         name: 'Success $_getCurrentTime',
-//         level: 0,
-//       );
-//     }
-//   }
+//*debug
+  static void debugLog(String message, [String tag = 'Debug']) {
+    if (kDebugMode) {
+      log(
+        '\x1B[37m$tag 🐛🐛🐛🐛🐛🐛🐛🐛🐛🐛🐛🐛🐛🐛: $message\x1B[0m',
+        name: 'Debug $_getCurrentTime',
+        level: 1,
+      );
+    }
+  }
 
-//   //* Debug
-//   static void debugLog(String message, [String tag = 'Debug']) {
-//     if (_shouldLog) {
-//       log(
-//         '\x1B[37m$tag 🐛🐛🐛🐛🐛🐛🐛🐛🐛🐛🐛🐛🐛🐛: $message\x1B[0m',
-//         name: 'Debug $_getCurrentTime',
-//         level: 1,
-//       );
-//     }
-//   }
+//*info
+  static void infoLog(String message, [String tag = 'Info']) {
+    if (kDebugMode) {
+      log(
+        '\x1B[33m$tag 📣📣📣📣📣📣📣📣📣📣📣📣📣: $message\x1B[0m',
+        name: 'Info $_getCurrentTime',
+        level: 2,
+      );
+    }
+  }
 
-//   //* Info
-//   static void infoLog(String message, [String tag = 'Info']) {
-//     if (_shouldLog) {
-//       log(
-//         '\x1B[33m$tag 📣📣📣📣📣📣📣📣📣📣📣📣📣: $message\x1B[0m',
-//         name: 'Info $_getCurrentTime',
-//         level: 2,
-//       );
-//     }
-//   }
+  //*error
+  static void errorLog(String message, [String tag = 'Error']) {
+    if (kDebugMode) {
+      log(
+        '\x1B[31m$tag ❌❌❌❌❌❌❌❌❌❌❌❌❌: $message\x1B[0m',
+        name: 'Error $_getCurrentTime',
+        level: 3,
+      );
+    }
+  } //*close
 
-//   //* Error
-//   static void errorLog(String message, [String tag = 'Error']) {
-//     if (_shouldLog) {
-//       log(
-//         '\x1B[31m$tag ❌❌❌❌❌❌❌❌❌❌❌❌❌: $message\x1B[0m',
-//         name: 'Error $_getCurrentTime',
-//         level: 3,
-//       );
-//     }
-//   }
-// }
+  static void closeLog(String message, [String tag = 'Close']) {
+    if (kDebugMode) {
+      log(
+        '\x1B[39m$tag ❌❌❌❌❌❌❌❌❌❌❌❌❌: $message\x1B[0m',
+        name: 'Close $_getCurrentTime',
+        level: 4,
+      );
+    }
+  }
+}

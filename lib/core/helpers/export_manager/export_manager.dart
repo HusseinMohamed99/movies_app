@@ -25,6 +25,7 @@ import 'package:movies_app/core/components/see_more_all_movie_or_tv_page.dart';
 import 'package:movies_app/core/helpers/app_string/app_string.dart';
 import 'package:movies_app/core/helpers/constant/constant.dart';
 import 'package:movies_app/core/helpers/enum/enum.dart';
+import 'package:movies_app/core/helpers/logs/app_logs.dart';
 import 'package:movies_app/core/network/api_constance.dart';
 import 'package:movies_app/core/routing/routes.dart';
 import 'package:movies_app/image_assets.dart';
