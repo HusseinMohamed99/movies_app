@@ -1,18 +1,6 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class TvsDetailsStates extends Equatable {
-  final TvDetails? tvsDetails;
-  final RequestState tvsDetailsStates;
-  final String tvsDetailsMessage;
-
-  final List<TvsRecommendation> tvsRecommendation;
-  final RequestState tvsRecommendationStates;
-  final String tvsRecommendationMessage;
-
-  final List<TvsSimilar> tvsSimilar;
-  final RequestState tvsSimilarStates;
-  final String tvsSimilarMessage;
-
   const TvsDetailsStates({
     this.tvsDetails,
     this.tvsDetailsStates = RequestState.loading,
@@ -24,6 +12,17 @@ class TvsDetailsStates extends Equatable {
     this.tvsSimilarStates = RequestState.loading,
     this.tvsSimilarMessage = '',
   });
+  final TvDetails? tvsDetails;
+  final RequestState tvsDetailsStates;
+  final String tvsDetailsMessage;
+
+  final List<TvsRecommendation> tvsRecommendation;
+  final RequestState tvsRecommendationStates;
+  final String tvsRecommendationMessage;
+
+  final List<TvsSimilar> tvsSimilar;
+  final RequestState tvsSimilarStates;
+  final String tvsSimilarMessage;
 
   TvsDetailsStates copyWith({
     TvDetails? tvsDetails,

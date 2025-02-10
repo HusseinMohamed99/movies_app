@@ -1,6 +1,20 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class TvsStates extends Equatable {
+  const TvsStates({
+    this.onTheAirTvs = const [],
+    this.onTheAirState = RequestState.loading,
+    this.onTheAirMessage = '',
+    this.airingTodayTvs = const [],
+    this.airingTodayState = RequestState.loading,
+    this.airingTodayMessage = '',
+    this.popularTvs = const [],
+    this.popularState = RequestState.loading,
+    this.popularMessage = '',
+    this.topRatedStates = RequestState.loading,
+    this.topRatedTvs = const [],
+    this.topRatedMessage = '',
+  });
   final List<Tvs> onTheAirTvs;
   final RequestState onTheAirState;
   final String onTheAirMessage;
@@ -17,28 +31,6 @@ class TvsStates extends Equatable {
   final RequestState topRatedStates;
   final String topRatedMessage;
 
-  // final List<MovieDetails> moviesDetails;
-  // final RequestState moviesDetailsStates;
-  // final String moviesDetailsMessage;
-
-  const TvsStates({
-    this.onTheAirTvs = const [],
-    this.onTheAirState = RequestState.loading,
-    this.onTheAirMessage = "",
-    this.airingTodayTvs = const [],
-    this.airingTodayState = RequestState.loading,
-    this.airingTodayMessage = "",
-    this.popularTvs = const [],
-    this.popularState = RequestState.loading,
-    this.popularMessage = "",
-    this.topRatedStates = RequestState.loading,
-    this.topRatedTvs = const [],
-    this.topRatedMessage = "",
-    // this.moviesDetails = const [],
-    // this.moviesDetailsStates = RequestState.loading,
-    // this.moviesDetailsMessage = "",
-  });
-
   TvsStates copyWith({
     List<Tvs>? onTheAirTvs,
     RequestState? onTheAirState,
@@ -52,9 +44,6 @@ class TvsStates extends Equatable {
     List<Tvs>? topRatedTvs,
     RequestState? topRatedStates,
     String? topRatedMessage,
-    // List<MovieDetails>? moviesDetails,
-    // RequestState? moviesDetailsStates,
-    // String? moviesDetailsMessage,
   }) {
     return TvsStates(
       onTheAirTvs: onTheAirTvs ?? this.onTheAirTvs,
@@ -63,16 +52,12 @@ class TvsStates extends Equatable {
       airingTodayTvs: airingTodayTvs ?? this.airingTodayTvs,
       airingTodayState: airingTodayState ?? this.airingTodayState,
       airingTodayMessage: airingTodayMessage ?? this.airingTodayMessage,
-
       popularMessage: popularMessage ?? this.popularMessage,
       popularTvs: popularTvs ?? this.popularTvs,
       popularState: popularState ?? this.popularState,
       topRatedMessage: topRatedMessage ?? this.topRatedMessage,
       topRatedTvs: topRatedTvs ?? this.topRatedTvs,
       topRatedStates: topRatedStates ?? this.topRatedStates,
-      // moviesDetailsMessage: moviesDetailsMessage ?? this.moviesDetailsMessage,
-      // moviesDetails: moviesDetails ?? this.moviesDetails,
-      // moviesDetailsStates: moviesDetailsStates ?? this.moviesDetailsStates,
     );
   }
 
@@ -84,15 +69,11 @@ class TvsStates extends Equatable {
         airingTodayTvs,
         airingTodayState,
         airingTodayMessage,
-
         popularMessage,
         popularState,
         popularTvs,
         topRatedStates,
         topRatedTvs,
         topRatedMessage,
-        // moviesDetails,
-        // moviesDetailsMessage,
-        // moviesDetailsStates,
       ];
 }

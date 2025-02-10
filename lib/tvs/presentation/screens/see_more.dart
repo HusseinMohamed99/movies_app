@@ -13,7 +13,7 @@ class SeeMoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(context, title: "$name Series"),
+      appBar: _buildAppBar(context, title: '$name Series'),
       body: ExploreAllMoviesOrTvsPage(
         itemCount: tvsList.length,
         itemBuilder: (context, index) {
@@ -69,7 +69,7 @@ class BuildTvsCard extends StatelessWidget {
                 ),
               ),
             ),
-            Space(height: 0, width: 10),
+            const Space(height: 0, width: 10),
             Expanded(
               child: BuildTvsCard(tvs: tvs),
             ),

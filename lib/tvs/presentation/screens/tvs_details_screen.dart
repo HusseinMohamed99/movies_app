@@ -1,9 +1,8 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class TvsDetailsScreen extends StatelessWidget {
-  final int tvsID;
-
   const TvsDetailsScreen({super.key, required this.tvsID});
+  final int tvsID;
 
   @override
   Widget build(BuildContext context) {
