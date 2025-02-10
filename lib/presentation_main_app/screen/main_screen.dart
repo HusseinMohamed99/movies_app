@@ -45,20 +45,31 @@ class _MainScreenState extends State<MainScreen> {
           ),
           child: Scaffold(
             resizeToAvoidBottomInset: false,
-            bottomNavigationBar: BottomNavigationBar(
-              currentIndex: state.currentIndex,
-              onTap: (index) {
-                context.read<MainBloc>().add(ChangeCurrentIndexEvent(index));
-              },
-              showSelectedLabels: true,
-              showUnselectedLabels: false,
-              items: [
-                bottomNavigationBarItem(icon: Icons.movie, label: "Movies"),
-                bottomNavigationBarItem(icon: Icons.tv, label: "Tvs"),
-                bottomNavigationBarItem(icon: Icons.search, label: "Search"),
-                bottomNavigationBarItem(
-                    icon: Icons.settings, label: "Settings"),
-              ],
+            bottomNavigationBar: Container(
+              decoration: const ShapeDecoration(
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  ),
+                ),
+              ),
+              child: BottomNavigationBar(
+                currentIndex: state.currentIndex,
+                onTap: (index) {
+                  context.read<MainBloc>().add(ChangeCurrentIndexEvent(index));
+                },
+                showSelectedLabels: true,
+                showUnselectedLabels: false,
+                items: [
+                  bottomNavigationBarItem(icon: Icons.movie, label: "Movies"),
+                  bottomNavigationBarItem(icon: Icons.tv, label: "Tvs"),
+                  bottomNavigationBarItem(icon: Icons.search, label: "Search"),
+                  bottomNavigationBarItem(
+                      icon: Icons.settings, label: "Settings"),
+                ],
+              ),
             ),
             body: Column(
               children: [
@@ -86,7 +97,7 @@ class _MainScreenState extends State<MainScreen> {
     return BottomNavigationBarItem(
       icon: Icon(icon),
       label: label,
-      backgroundColor: Colors.black,
+      backgroundColor: ColorManager.charCoolColor,
     );
   }
 }

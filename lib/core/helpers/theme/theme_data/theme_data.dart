@@ -3,9 +3,14 @@ part of './../../export_manager/export_manager.dart';
 Map<AppTheme, ThemeData> getThemeData(BuildContext context) => {
       AppTheme.darkTheme: ThemeData(
         scaffoldBackgroundColor: ColorManager.charCoolColor,
-        primaryColor: ColorManager.darkPrimary,
+        primaryColor: ColorManager.charCoolColor,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
+          systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: Colors.transparent,
+            statusBarIconBrightness: Brightness.light,
+            systemNavigationBarColor: ColorManager.charCoolColor,
+          ),
         ),
         bottomSheetTheme: BottomSheetThemeData(
           backgroundColor: ColorManager.greyDarkColor,
@@ -24,7 +29,7 @@ Map<AppTheme, ThemeData> getThemeData(BuildContext context) => {
           ),
         ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: Colors.black,
+          backgroundColor: ColorManager.primaryGreenColor,
           showSelectedLabels: true,
           showUnselectedLabels: false,
           selectedIconTheme: IconThemeData(
