@@ -101,13 +101,13 @@ class HorizontalTvCardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(8.0).r),
+        borderRadius: BorderRadius.all(const Radius.circular(8.0).r),
         border: Border.all(
           color: ColorManager.whiteColor,
           width: 1.0,
         ),
       ),
-      child: InkWell(
+      child: GestureDetector(
         onTap: () {
           navigateToTvDetails(context, tvModel?.id ?? 0);
         },

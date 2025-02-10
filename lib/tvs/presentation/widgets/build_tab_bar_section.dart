@@ -7,7 +7,7 @@ class BuildTabBarSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TabBar(
+        const TabBar(
           labelPadding: EdgeInsets.zero,
           labelColor: ColorManager.whiteColor,
           unselectedLabelColor: ColorManager.greyColor,
@@ -22,7 +22,7 @@ class BuildTabBarSection extends StatelessWidget {
         SizedBox(
           width: double.maxFinite,
           height: context.height * 0.5,
-          child: TabBarView(
+          child: const TabBarView(
             children: [
               ShowSeasonSeries(),
               ShowRecommendationSeries(),
