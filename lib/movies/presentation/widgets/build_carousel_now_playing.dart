@@ -8,15 +8,24 @@ class NowPlayingCarousel extends StatelessWidget {
     return CarouselSlider(
       options: CarouselOptions(
         autoPlay: true,
-        height: 300.h,
+        height: context.height * 0.5,
         viewportFraction: 1.0,
         onPageChanged: (index, reason) {},
       ),
-      items: movies.map((movie) => _buildCarouselItem(movie, context)).toList(),
+      items: movies.map((movie) => BuildCarouselItem(movie: movie)).toList(),
     );
   }
+}
 
-  Widget _buildCarouselItem(Movies movie, BuildContext context) {
+class BuildCarouselItem extends StatelessWidget {
+  const BuildCarouselItem({
+    super.key,
+    required this.movie,
+  });
+  final Movies movie;
+
+  @override
+  Widget build(BuildContext context) {
     return GestureDetector(
       key: const Key('openMovieMinimalDetail'),
       onTap: () {
@@ -36,13 +45,21 @@ class NowPlayingCarousel extends StatelessWidget {
             width: double.infinity,
             height: context.height * 0.5,
           ),
-          _buildMovieInfo(context, movie),
+          BuildMovieInfo(movie: movie),
         ],
       ),
     );
   }
+}
 
-  Widget _buildMovieInfo(BuildContext context, Movies movie) {
+class BuildMovieInfo extends StatelessWidget {
+  const BuildMovieInfo({
+    super.key,
+    required this.movie,
+  });
+  final Movies movie;
+  @override
+  Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Padding(
