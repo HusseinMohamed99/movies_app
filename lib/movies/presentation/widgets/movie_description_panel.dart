@@ -35,8 +35,10 @@ class MovieDetailsDisplay extends StatelessWidget {
         ShowCast(moviesDetailsStates: moviesDetailsStates),
       if (moviesDetailsStates.moviesDetails?.reviews?.isNotEmpty ?? false)
         ShowReviews(moviesDetailsStates: moviesDetailsStates),
-      ShowRecommendations(moviesDetailsStates: moviesDetailsStates),
-      ShowSimilar(moviesDetailsStates: moviesDetailsStates),
+      if (moviesDetailsStates.moviesRecommendation.isNotEmpty)
+        ShowRecommendations(moviesDetailsStates: moviesDetailsStates),
+      if (moviesDetailsStates.moviesSimilar.isNotEmpty)
+        ShowSimilar(moviesDetailsStates: moviesDetailsStates),
     ];
 
     return SingleChildScrollView(

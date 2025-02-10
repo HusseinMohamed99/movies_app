@@ -32,7 +32,9 @@ class MovieRecommendationsDisplay extends StatelessWidget {
     return BlocBuilder<MoviesDetailsBloc, MoviesDetailsStates>(
       builder: (context, state) {
         if (state.moviesRecommendationStates == RequestState.loading) {
-          return SizedBox(height: 300.h, child: const LoadingIndicator());
+          return MoviesRecommendationWidget(
+            moviesDetailsStates: state,
+          ).skeletonize();
         }
 
         if (state.moviesRecommendationStates == RequestState.loaded) {
@@ -40,9 +42,8 @@ class MovieRecommendationsDisplay extends StatelessWidget {
             moviesDetailsStates: state,
           );
         } else {
-          return NoDataFoundWidget(
-            message: state.moviesRecommendationMessage,
-            imagePath: Assets.imagesNoData,
+          return BuildErrorMessage(
+            errorMessage: state.moviesRecommendationMessage,
           );
         }
       },
