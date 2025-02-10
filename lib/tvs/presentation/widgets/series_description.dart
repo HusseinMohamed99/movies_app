@@ -14,14 +14,20 @@ class SeriesDescription extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         SeriesInfoRow(state: state),
-        Space(height: 16, width: 0),
-        CinemaOverviewAndGenres(
-          overview: state.tvsDetails?.overview ?? '',
-          genres: state.tvsDetails?.genres ??
-              [
-                Genres(id: 0, name: ''),
-              ],
-        ),
+        if (state.tvsDetails!.overview.isNotEmpty ||
+            state.tvsDetails!.genres.isNotEmpty)
+          Column(
+            children: [
+              Space(height: 16, width: 0),
+              CinemaOverviewAndGenres(
+                overview: state.tvsDetails?.overview ?? '',
+                genres: state.tvsDetails?.genres ??
+                    [
+                      Genres(id: 0, name: ''),
+                    ],
+              ),
+            ],
+          ),
       ],
     );
   }
