@@ -15,7 +15,7 @@ class ShowCast extends StatelessWidget {
       children: [
         Text(
           AppString.cast,
-          style: TextStyleManager.titleMedium(context: context),
+          style: TextStyleManager.titleSmall(context: context),
         ),
         Space(height: 8, width: 0),
         ShowCastForMovies(moviesDetailsStates.moviesDetails?.cast),

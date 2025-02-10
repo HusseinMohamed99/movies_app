@@ -15,7 +15,7 @@ class ShowRecommendations extends StatelessWidget {
       children: [
         Text(
           AppString.recommendations,
-          style: TextStyleManager.titleMedium(context: context),
+          style: TextStyleManager.titleSmall(context: context),
         ),
         Space(height: 8, width: 0),
         MovieRecommendationsDisplay(),

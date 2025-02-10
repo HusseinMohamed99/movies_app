@@ -22,7 +22,7 @@ class ReviewCard extends StatelessWidget {
         width: 240.w,
         height: double.infinity,
         decoration: BoxDecoration(
-          color: ColorManager.charCoolColor,
+          color: ColorManager.darkPrimary,
           borderRadius: BorderRadius.circular(12).r,
         ),
         child: Column(
