@@ -85,7 +85,7 @@ class BuildMovieInfo extends StatelessWidget {
             Text(
               movie.title,
               textAlign: TextAlign.center,
-              style: TextStyleManager.titleLarge(context: context),
+              style: TextStyleManager.titleMedium(context: context),
             ),
           ],
         ),

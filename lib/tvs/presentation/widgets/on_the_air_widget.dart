@@ -12,10 +12,9 @@ class OnTheAirWidget extends StatelessWidget {
         if (state.onTheAirState == RequestState.loaded) {
           return OnTheAirCarousel(tvModel: state.onTheAirTvs);
         } else if (state.onTheAirState == RequestState.error) {
-          return Text('Error');
+          return BuildErrorMessage(errorMessage: state.onTheAirMessage);
         } else {
-          return Skeletonizer(
-              enabled: true, child: OnTheAirCarousel(tvModel: []));
+          return OnTheAirCarousel(tvModel: []).skeletonize();
         }
       },
     );
