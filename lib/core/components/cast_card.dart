@@ -1,12 +1,11 @@
 part of './../helpers/export_manager/export_manager.dart';
 
 class CastCard extends StatelessWidget {
-  final Cast cast;
-
   const CastCard({
     required this.cast,
     super.key,
   });
+  final Cast cast;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class CastCard extends StatelessWidget {
               boxFit: BoxFit.fitWidth,
             ),
           ),
-          Space(height: 8, width: 0),
+          const Space(height: 8, width: 0),
           Text(
             cast.name,
             style: TextStyleManager.labelSmall(context: context),

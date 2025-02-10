@@ -3,14 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movies_app/core/helpers/export_manager/export_manager.dart';
 
 class HorizontalListView extends StatelessWidget {
-  final int itemCount;
-  final Widget Function(BuildContext context, int index) itemBuilder;
-
   const HorizontalListView({
     super.key,
     required this.itemCount,
     required this.itemBuilder,
   });
+  final int itemCount;
+  final Widget Function(BuildContext context, int index) itemBuilder;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class HorizontalListView extends StatelessWidget {
         itemCount: itemCount,
         itemBuilder: itemBuilder,
         separatorBuilder: (context, index) {
-          return Space(
+          return const Space(
             height: 10,
             width: 16,
           );

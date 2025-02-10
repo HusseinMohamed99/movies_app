@@ -20,13 +20,13 @@ class CinemaAttributes extends StatelessWidget {
             releaseDate: releaseDate ?? '',
           ),
         ),
-        Space(height: 0, width: 8),
+        const Space(height: 0, width: 8),
         Expanded(
           child: CinemaRating(
             rate: rate ?? '',
           ),
         ),
-        Space(height: 0, width: 8),
+        const Space(height: 0, width: 8),
         Expanded(
           child: CinemaDuration(
             duration: duration ?? 0,
