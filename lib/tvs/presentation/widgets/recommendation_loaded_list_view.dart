@@ -15,8 +15,7 @@ class RecommendationLoadedListView extends StatelessWidget {
       itemBuilder: (context, index) {
         final recommendation = state.tvsRecommendation[index];
         return RecommendationLoadedItem(
-          iD: recommendation.id,
-          backdropPath: recommendation.backdropPath ?? '',
+          tvsRecommendation: recommendation,
         );
       },
       separatorBuilder: (context, index) {

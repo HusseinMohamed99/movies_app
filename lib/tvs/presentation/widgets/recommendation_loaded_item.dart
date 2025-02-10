@@ -3,12 +3,10 @@ part of './../../../core/helpers/export_manager/export_manager.dart';
 class RecommendationLoadedItem extends StatelessWidget {
   const RecommendationLoadedItem({
     super.key,
-    required this.iD,
-    required this.backdropPath,
+    required this.tvsRecommendation,
   });
 
-  final int iD;
-  final String backdropPath;
+  final TvsRecommendation tvsRecommendation;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +15,7 @@ class RecommendationLoadedItem extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => TvsDetailsScreen(tvsID: iD),
+            builder: (context) => TvsDetailsScreen(tvsID: tvsRecommendation.id),
           ),
         );
       },
@@ -31,7 +29,8 @@ class RecommendationLoadedItem extends StatelessWidget {
         child: ClipRRect(
           borderRadius: const BorderRadius.all(Radius.circular(8.0)).r,
           child: CachedImage(
-            imageUrl: ApiConstance.imageURL(backdropPath),
+            imageUrl:
+                ApiConstance.imageURL(tvsRecommendation.backdropPath ?? ''),
             width: 90.w,
             height: 90.h,
             boxFit: BoxFit.cover,
