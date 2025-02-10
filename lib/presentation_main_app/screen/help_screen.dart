@@ -42,22 +42,22 @@ class SupportScreen extends StatelessWidget {
                 ),
               ),
             ),
-            CardItem(
+            const CardItem(
               title: 'Mail',
               url: 'mailto:hussein.mohmed1907@gmail.com',
               imageSvg: Assets.imagesGoogle,
             ),
-            CardItem(
+            const CardItem(
               title: 'GitHub',
               url: 'https://github.com/HusseinMohamed99',
               imageSvg: Assets.imagesGithub,
             ),
-            CardItem(
+            const CardItem(
               title: 'LinkedIn',
               url: 'https://www.linkedin.com/in/hussein99',
               imageSvg: Assets.imagesLinkedin,
             ),
-            CardItem(
+            const CardItem(
               title: 'Google play',
               url:
                   'https://play.google.com/store/apps/dev?id=5842045484913788359',
