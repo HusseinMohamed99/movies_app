@@ -8,26 +8,28 @@ class RecommendationLoadedListView extends StatelessWidget {
   final TvsDetailsStates state;
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      scrollDirection: Axis.vertical,
-      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
-      itemCount: state.tvsRecommendation.length,
-      itemBuilder: (context, index) {
-        if (state.tvsRecommendation.isEmpty) {
-          return SvgPicture.asset(
-            Assets.imagesNoData,
-            height: 200.h,
-            width: 200.w,
+    if (state.tvsRecommendation.isEmpty) {
+      return Image.asset(
+        Assets.imagesNoData,
+        height: 100.h,
+        width: 100.w,
+      );
+    } else {
+      return ListView.separated(
+        scrollDirection: Axis.vertical,
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+        itemCount: state.tvsRecommendation.length,
+        itemBuilder: (context, index) {
+          return RecommendationLoadedItem(
+            backdropPath: state.tvsRecommendation[index].backdropPath ?? '',
+            id: state.tvsRecommendation[index].id,
+            name: state.tvsRecommendation[index].name,
           );
-        }
-        return RecommendationLoadedItem(
-          tvsDetailsStates: state,
-          index: index,
-        );
-      },
-      separatorBuilder: (context, index) {
-        return Space(height: 20, width: 0);
-      },
-    );
+        },
+        separatorBuilder: (context, index) {
+          return Space(height: 20, width: 0);
+        },
+      );
+    }
   }
 }

@@ -14,8 +14,8 @@ class SeriesDescription extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         SeriesInfoRow(state: state),
-        if (state.tvsDetails!.overview.isNotEmpty &&
-            state.tvsDetails!.genres.isNotEmpty)
+        if (state.tvsDetails?.genres != null &&
+            state.tvsDetails?.overview != '')
           Column(
             children: [
               Space(height: 16, width: 0),
