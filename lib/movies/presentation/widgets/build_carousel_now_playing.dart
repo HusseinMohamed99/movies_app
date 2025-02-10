@@ -31,10 +31,10 @@ class NowPlayingCarousel extends StatelessWidget {
       child: Stack(
         children: [
           CachedImage(
-            boxFit: BoxFit.fitHeight,
+            boxFit: BoxFit.fill,
             imageUrl: ApiConstance.imageURL(movie.backdropPath),
             width: double.infinity,
-            height: 560.h,
+            height: context.height * 0.5,
           ),
           _buildMovieInfo(context, movie),
         ],
