@@ -17,8 +17,8 @@ class ShowSimilar extends StatelessWidget {
           AppString.moreLikeThis,
           style: TextStyleManager.titleSmall(context: context),
         ),
-        Space(height: 8, width: 0),
-        ShowSimilarMovies(),
+        const Space(height: 8, width: 0),
+        const ShowSimilarMovies(),
       ],
     );
   }

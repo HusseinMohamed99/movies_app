@@ -2,11 +2,6 @@ part of './../../core/helpers/export_manager/export_manager.dart';
 
 // A Cubit (a state management class) to manage internet connectivity.
 class InternetCubit extends Cubit<InternetState> {
-  final Connectivity _connectivity = Connectivity();
-
-  // Subscription to monitor changes in internet connectivity.
-  StreamSubscription? _connectivitySubscription;
-
   // Constructor for the InternetCubit class.
   InternetCubit() : super(InternetState.initial) {
 // Start listening to changes in connectivity when an instance is created.
@@ -21,6 +16,10 @@ class InternetCubit extends Cubit<InternetState> {
       }
     });
   }
+  final Connectivity _connectivity = Connectivity();
+
+  // Subscription to monitor changes in internet connectivity.
+  StreamSubscription? _connectivitySubscription;
 
   @override
   Future<void> close() {

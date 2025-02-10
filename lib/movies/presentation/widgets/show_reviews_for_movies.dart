@@ -17,7 +17,7 @@ class ShowReviews extends StatelessWidget {
           AppString.reviews,
           style: TextStyleManager.titleSmall(context: context),
         ),
-        Space(height: 8, width: 0),
+        const Space(height: 8, width: 0),
         ShowReviewsForMovies(moviesDetailsStates.moviesDetails?.reviews),
       ],
     );
@@ -37,7 +37,7 @@ class ShowReviewsForMovies extends StatelessWidget {
       itemCount: reviews?.length ?? 0,
       itemBuilder: (context, index) => ReviewCard(
         review: reviews?[index] ??
-            Review(
+            const Review(
               authorName: '',
               content: '',
               rating: 0.0,
