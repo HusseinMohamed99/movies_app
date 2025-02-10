@@ -2,9 +2,8 @@ part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class GetMovieRecommendationUseCase extends GenericUseCase<
     List<MoviesRecommendation>, MovieRecommendationParameters> {
-  final MovieDataRepository baseMovieRepository;
-
   GetMovieRecommendationUseCase({required this.baseMovieRepository});
+  final MovieDataRepository baseMovieRepository;
 
   @override
   Future<Either<Failure, List<MoviesRecommendation>>> call(
@@ -14,9 +13,8 @@ class GetMovieRecommendationUseCase extends GenericUseCase<
 }
 
 class MovieRecommendationParameters extends Equatable {
-  final int movieID;
-
   const MovieRecommendationParameters({required this.movieID});
+  final int movieID;
 
   @override
   List<Object> get props => [movieID];

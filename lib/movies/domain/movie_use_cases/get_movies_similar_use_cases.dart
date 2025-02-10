@@ -2,9 +2,8 @@ part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class GetMovieSimilarUseCase
     extends GenericUseCase<List<MoviesSimilar>, MovieSimilarParameters> {
-  final MovieDataRepository baseMovieRepository;
-
   GetMovieSimilarUseCase({required this.baseMovieRepository});
+  final MovieDataRepository baseMovieRepository;
 
   @override
   Future<Either<Failure, List<MoviesSimilar>>> call(
@@ -14,9 +13,8 @@ class GetMovieSimilarUseCase
 }
 
 class MovieSimilarParameters extends Equatable {
-  final int movieID;
-
   const MovieSimilarParameters({required this.movieID});
+  final int movieID;
 
   @override
   List<Object> get props => [movieID];
