@@ -34,12 +34,22 @@ class GridViewCard extends StatelessWidget {
           },
           child: AspectRatio(
             aspectRatio: 2 / 3,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(8).r,
-              child: CachedImage(
-                imageUrl: ApiConstance.imageURL(item.posterUrl),
-                width: double.infinity,
-                height: 150.h,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8).r,
+                border: Border.all(
+                  color: ColorManager.whiteColor,
+                  width: 1.0,
+                ),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8).r,
+                child: CachedImage(
+                  imageUrl: ApiConstance.imageURL(item.posterUrl),
+                  width: double.infinity,
+                  boxFit: BoxFit.fill,
+                  height: 150.h,
+                ),
               ),
             ),
           ),
