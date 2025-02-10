@@ -55,6 +55,9 @@ Widget _buildMovieCard(BuildContext context, Movies movie) {
     decoration: BoxDecoration(
       color: ColorManager.darkPrimary,
       borderRadius: BorderRadius.circular(10).r,
+      border: Border.all(
+        color: ColorManager.whiteColor,
+      ),
     ),
     padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
     margin: EdgeInsets.symmetric(vertical: 10.h),
@@ -62,25 +65,29 @@ Widget _buildMovieCard(BuildContext context, Movies movie) {
       onTap: () => navigateToMovieDetails(context, movie.id),
       child: Row(
         children: [
-          _buildMovieImage(movie),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.0).r,
+              border: Border.all(
+                color: ColorManager.whiteColor,
+              ),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8.0).r,
+              child: CachedImage(
+                boxFit: BoxFit.fitHeight,
+                imageUrl: ApiConstance.imageURL(movie.backdropPath),
+                width: 120.w,
+                height: 140.h,
+              ),
+            ),
+          ),
           Space(height: 0, width: 10),
           Expanded(
             child: _buildMovieInfo(context, movie),
           ),
         ],
       ),
-    ),
-  );
-}
-
-Widget _buildMovieImage(Movies movie) {
-  return ClipRRect(
-    borderRadius: BorderRadius.circular(8.0).r,
-    child: CachedImage(
-      boxFit: BoxFit.fitHeight,
-      imageUrl: ApiConstance.imageURL(movie.backdropPath),
-      width: 120.w,
-      height: 140.h,
     ),
   );
 }

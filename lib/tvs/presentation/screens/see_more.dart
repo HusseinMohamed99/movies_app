@@ -47,6 +47,9 @@ Widget _buildTvsCard(BuildContext context, Tvs tvs) {
     decoration: BoxDecoration(
       color: ColorManager.darkPrimary,
       borderRadius: BorderRadius.circular(10).r,
+      border: Border.all(
+        color: ColorManager.whiteColor,
+      ),
     ),
     padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
     margin: EdgeInsets.symmetric(vertical: 10.h),
@@ -54,10 +57,26 @@ Widget _buildTvsCard(BuildContext context, Tvs tvs) {
       onTap: () => navigateToTvDetails(context, tvs.id),
       child: Row(
         children: [
-          _buildTvsImage(tvs),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.0).r,
+              border: Border.all(
+                color: ColorManager.whiteColor,
+              ),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8.0).r,
+              child: CachedImage(
+                boxFit: BoxFit.fitHeight,
+                imageUrl: ApiConstance.imageURL(tvs.backdropPath),
+                width: 120.w,
+                height: 140.h,
+              ),
+            ),
+          ),
           Space(height: 0, width: 10),
           Expanded(
-            child: _buildTvsInfo(context, tvs),
+            child: BuildTvsCard(tvs: tvs),
           ),
         ],
       ),
@@ -65,38 +84,35 @@ Widget _buildTvsCard(BuildContext context, Tvs tvs) {
   );
 }
 
-Widget _buildTvsImage(Tvs tvs) {
-  return ClipRRect(
-    borderRadius: BorderRadius.circular(8.0).r,
-    child: CachedImage(
-      boxFit: BoxFit.fitHeight,
-      imageUrl: ApiConstance.imageURL(tvs.backdropPath),
-      width: 120.w,
-      height: 140.h,
-    ),
-  );
-}
+class BuildTvsCard extends StatelessWidget {
+  const BuildTvsCard({
+    super.key,
+    required this.tvs,
+  });
+  final Tvs tvs;
 
-Widget _buildTvsInfo(BuildContext context, Tvs tvs) {
-  return Column(
-    spacing: 10.h,
-    crossAxisAlignment: CrossAxisAlignment.start,
-    mainAxisAlignment: MainAxisAlignment.start,
-    children: [
-      Text(
-        tvs.name,
-        overflow: TextOverflow.ellipsis,
-        maxLines: 1,
-        style: TextStyleManager.titleMedium(context: context),
-      ),
-      BuildReleaseDateChip(releaseDate: tvs.firstAirDate),
-      BuildRating(rating: tvs.voteAverage),
-      Text(
-        tvs.overview,
-        maxLines: 2,
-        overflow: TextOverflow.ellipsis,
-        style: TextStyleManager.labelSmall(context: context),
-      ),
-    ],
-  );
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      spacing: 10.h,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Text(
+          tvs.name,
+          overflow: TextOverflow.ellipsis,
+          maxLines: 1,
+          style: TextStyleManager.titleMedium(context: context),
+        ),
+        BuildReleaseDateChip(releaseDate: tvs.firstAirDate),
+        BuildRating(rating: tvs.voteAverage),
+        Text(
+          tvs.overview,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+          style: TextStyleManager.labelSmall(context: context),
+        ),
+      ],
+    );
+  }
 }
