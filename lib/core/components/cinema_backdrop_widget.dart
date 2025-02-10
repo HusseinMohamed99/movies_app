@@ -13,7 +13,7 @@ class CinemaBackdropWidget extends StatelessWidget {
     return CachedImage(
       imageUrl: ApiConstance.imageURL(backdropPath),
       width: double.infinity,
-      height: 200.h,
+      height: context.height * 0.2,
       boxFit: BoxFit.fitHeight,
     );
   }
