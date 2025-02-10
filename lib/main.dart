@@ -14,11 +14,10 @@ import 'package:package_info_plus/package_info_plus.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await MobileAds.instance.initialize();
-
   await _initializeFirebase();
-  ScreenUtil.ensureScreenSize();
+  await ScreenUtil.ensureScreenSize();
   Bloc.observer = MyBlocObserver();
-  await dotenv.load(fileName: ".env");
+  await dotenv.load(fileName: '.env');
 
   // Initialize all services including BlocProviders
   await serviceLocator();
@@ -39,14 +38,9 @@ Future<void> _initializeFirebase() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
   if (kReleaseMode) {
-    // Pass all uncaught "fatal" errors from the framework to Crashlytics
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
-
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
-
-    // Pass all uncaught asynchronous errors that aren't handled by the Flutter framework to Crashlytics
     PlatformDispatcher.instance.onError = (error, stack) {
       FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
       return true;

@@ -37,17 +37,17 @@ class MovieDetailsModel extends MovieDetails {
 
   factory MovieDetailsModel.fromJson(Map<String, dynamic> json) {
     return MovieDetailsModel(
-      overview: json["overview"],
-      id: json["id"],
-      title: json["title"],
-      voteAverage: json["vote_average"].toDouble(),
-      backdropPath: json["backdrop_path"] ?? '',
-      releaseDate: json["release_date"],
-      posterPath: json["poster_path"] ?? '',
+      overview: json['overview'],
+      id: json['id'],
+      title: json['title'],
+      voteAverage: json['vote_average'].toDouble(),
+      backdropPath: json['backdrop_path'] ?? '',
+      releaseDate: json['release_date'],
+      posterPath: json['poster_path'] ?? '',
       adult: json['adult'],
       genres: List<GenresModel>.from(
-          json["genres"].map((e) => GenresModel.fromJson(e))),
-      runtime: json["runtime"],
+          json['genres'].map((e) => GenresModel.fromJson(e))),
+      runtime: json['runtime'],
       trailerUrl: getTrailerUrl(json),
       cast: List<CastModel>.from(
           (json['credits']['cast'] as List).map((e) => CastModel.fromJson(e))),
