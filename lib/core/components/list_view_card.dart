@@ -11,7 +11,6 @@ class HorizontalListViewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // padding: EdgeInsets.only(right: 8.w),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(8.0).r),
         border: Border.all(

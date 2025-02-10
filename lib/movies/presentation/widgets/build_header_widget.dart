@@ -34,21 +34,18 @@ class BuildHeaderWidget extends StatelessWidget {
                 addEvent: addEvent,
               );
             },
-            child: Padding(
-              padding: const EdgeInsets.all(8.0).r,
-              child: Row(
-                children: [
-                  Text(
-                    AppString.seeMore,
-                    style: TextStyleManager.labelSmall(context: context),
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    size: 16.sp,
-                    color: ColorManager.whiteColor,
-                  ),
-                ],
-              ),
+            child: Row(
+              children: [
+                Text(
+                  AppString.seeMore,
+                  style: TextStyleManager.labelSmall(context: context),
+                ),
+                Icon(
+                  Icons.arrow_forward_ios,
+                  size: 16.sp,
+                  color: ColorManager.whiteColor,
+                ),
+              ],
             ),
           ),
         ],

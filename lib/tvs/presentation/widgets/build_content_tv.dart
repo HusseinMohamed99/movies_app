@@ -53,7 +53,7 @@ class BuildHeaderTvWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(16.0, 24.0, 16.0, 8.0).r,
+      margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -69,21 +69,18 @@ class BuildHeaderTvWidget extends StatelessWidget {
                 title: title,
               );
             },
-            child: Padding(
-              padding: const EdgeInsets.all(8.0).r,
-              child: Row(
-                children: [
-                  Text(
-                    AppString.seeMore,
-                    style: TextStyleManager.labelSmall(context: context),
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    size: 16.sp,
-                    color: ColorManager.whiteColor,
-                  ),
-                ],
-              ),
+            child: Row(
+              children: [
+                Text(
+                  AppString.seeMore,
+                  style: TextStyleManager.labelSmall(context: context),
+                ),
+                Icon(
+                  Icons.arrow_forward_ios,
+                  size: 16.sp,
+                  color: ColorManager.whiteColor,
+                ),
+              ],
             ),
           ),
         ],
@@ -103,7 +100,13 @@ class HorizontalTvCardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(right: 8.w),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(8.0).r),
+        border: Border.all(
+          color: ColorManager.whiteColor,
+          width: 1.0,
+        ),
+      ),
       child: InkWell(
         onTap: () {
           navigateToTvDetails(context, tvModel?.id ?? 0);
