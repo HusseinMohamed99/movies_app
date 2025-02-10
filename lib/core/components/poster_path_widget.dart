@@ -20,7 +20,7 @@ class PosterPathWidget extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10).r,
         child: CachedImage(
-          boxFit: BoxFit.fill,
+          boxFit: BoxFit.fitHeight,
           imageUrl: ApiConstance.imageURL(posterImage),
           width: 120.w,
           height: 150.h,

@@ -14,13 +14,13 @@ class CinemaOverviewAndGenres extends StatelessWidget {
       children: [
         Text(
           overview,
-          style: TextStyleManager.titleSmall(context: context),
+          style: TextStyleManager.labelMedium(context: context),
         ),
         Space(height: 8, width: 0),
         Text.rich(
           TextSpan(
             text: "${AppString.genres}: ",
-            style: TextStyleManager.titleMedium(context: context),
+            style: TextStyleManager.labelMedium(context: context),
             children: [
               TextSpan(
                 text: _showGenres(genres),

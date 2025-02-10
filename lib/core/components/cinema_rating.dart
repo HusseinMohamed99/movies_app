@@ -9,7 +9,7 @@ class CinemaRating extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(Icons.star, color: ColorManager.iconRateColor, size: 24.sp),
+        Icon(Icons.star, color: ColorManager.iconRateColor, size: 20.sp),
         Text(
           rate ?? '',
           style: TextStyleManager.labelMedium(context: context),
