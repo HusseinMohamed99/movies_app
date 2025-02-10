@@ -17,7 +17,7 @@ class MovieSeeMoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(context, title: "$title Movies"),
+      appBar: _buildAppBar(context, title: '$title Movies'),
       body: ExploreAllMoviesOrTvsPage(
         itemCount: movieList.length + (fetchData ? 0 : 1),
         itemBuilder: (context, index) {
@@ -29,9 +29,7 @@ class MovieSeeMoreScreen extends StatelessWidget {
             return const LoadingIndicator();
           }
         },
-        addEvent: () {
-          addEvent();
-        },
+        addEvent: addEvent(),
       ),
     );
   }
@@ -77,7 +75,7 @@ class BuildMovieCard extends StatelessWidget {
                 ),
               ),
             ),
-            Space(height: 0, width: 10),
+            const Space(height: 0, width: 10),
             Expanded(
               child: BuildMovieCardInfo(movie: movie),
             ),

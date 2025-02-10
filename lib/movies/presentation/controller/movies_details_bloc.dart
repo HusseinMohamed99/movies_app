@@ -1,10 +1,6 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class MoviesDetailsBloc extends Bloc<MoviesDetailsEvent, MoviesDetailsStates> {
-  final GetMovieDetailsUseCase getMovieDetailsUseCase;
-  final GetMovieRecommendationUseCase getMovieRecommendationsUseCase;
-  final GetMovieSimilarUseCase getMovieSimilarUseCase;
-
   MoviesDetailsBloc(this.getMovieDetailsUseCase,
       this.getMovieRecommendationsUseCase, this.getMovieSimilarUseCase)
       : super(const MoviesDetailsStates()) {
@@ -12,6 +8,9 @@ class MoviesDetailsBloc extends Bloc<MoviesDetailsEvent, MoviesDetailsStates> {
     on<GetMoviesRecommendationEvent>(_getMovieRecommendations);
     on<GetMoviesSimilarEvent>(_getMovieSimilar);
   }
+  final GetMovieDetailsUseCase getMovieDetailsUseCase;
+  final GetMovieRecommendationUseCase getMovieRecommendationsUseCase;
+  final GetMovieSimilarUseCase getMovieSimilarUseCase;
 
   FutureOr<void> _getMovieDetails(
       GetMoviesDetailsEvent event, Emitter<MoviesDetailsStates> emit) async {

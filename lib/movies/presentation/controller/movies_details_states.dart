@@ -1,29 +1,26 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class MoviesDetailsStates extends Equatable {
-  final MovieDetails? moviesDetails;
-  final RequestState moviesDetailsStates;
-  final String moviesDetailsMessage;
-
-  final List<MoviesRecommendation> moviesRecommendation;
-  final RequestState moviesRecommendationStates;
-  final String moviesRecommendationMessage;
-
-  final List<MoviesSimilar> moviesSimilar;
-  final RequestState moviesSimilarStates;
-  final String moviesSimilarMessage;
-
   const MoviesDetailsStates({
     this.moviesDetails,
     this.moviesDetailsStates = RequestState.loading,
-    this.moviesDetailsMessage = "",
+    this.moviesDetailsMessage = '',
     this.moviesRecommendation = const [],
     this.moviesRecommendationStates = RequestState.loading,
-    this.moviesRecommendationMessage = "",
+    this.moviesRecommendationMessage = '',
     this.moviesSimilar = const [],
     this.moviesSimilarStates = RequestState.loading,
-    this.moviesSimilarMessage = "",
+    this.moviesSimilarMessage = '',
   });
+  final MovieDetails? moviesDetails;
+  final RequestState moviesDetailsStates;
+  final String moviesDetailsMessage;
+  final List<MoviesRecommendation> moviesRecommendation;
+  final RequestState moviesRecommendationStates;
+  final String moviesRecommendationMessage;
+  final List<MoviesSimilar> moviesSimilar;
+  final RequestState moviesSimilarStates;
+  final String moviesSimilarMessage;
 
   MoviesDetailsStates copyWith({
     MovieDetails? moviesDetails,

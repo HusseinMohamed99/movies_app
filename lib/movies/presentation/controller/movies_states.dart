@@ -1,43 +1,38 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class MoviesStates extends Equatable {
-  final List<Movies> nowPlayingMovies;
-  final RequestState nowPlayingState;
-  final String nowPlayingMessage;
-
-  final List<Movies> upcomingMovies;
-  final RequestState upcomingState;
-  final String upcomingMessage;
-
-  final List<Movies> popularMovies;
-  final RequestState popularState;
-  final String popularMessage;
-
-  final List<Movies> topRatedMovies;
-  final RequestState topRatedStates;
-  final String topRatedMessage;
-
-  final List<MovieDetails> moviesDetails;
-  final RequestState moviesDetailsStates;
-  final String moviesDetailsMessage;
-
   const MoviesStates({
     this.nowPlayingMovies = const [],
     this.nowPlayingState = RequestState.loading,
-    this.nowPlayingMessage = "",
+    this.nowPlayingMessage = '',
     this.upcomingMovies = const [],
     this.upcomingState = RequestState.loading,
-    this.upcomingMessage = "",
+    this.upcomingMessage = '',
     this.popularMovies = const [],
     this.popularState = RequestState.loading,
-    this.popularMessage = "",
+    this.popularMessage = '',
     this.topRatedStates = RequestState.loading,
     this.topRatedMovies = const [],
-    this.topRatedMessage = "",
+    this.topRatedMessage = '',
     this.moviesDetails = const [],
     this.moviesDetailsStates = RequestState.loading,
-    this.moviesDetailsMessage = "",
+    this.moviesDetailsMessage = '',
   });
+  final List<Movies> nowPlayingMovies;
+  final RequestState nowPlayingState;
+  final String nowPlayingMessage;
+  final List<Movies> upcomingMovies;
+  final RequestState upcomingState;
+  final String upcomingMessage;
+  final List<Movies> popularMovies;
+  final RequestState popularState;
+  final String popularMessage;
+  final List<Movies> topRatedMovies;
+  final RequestState topRatedStates;
+  final String topRatedMessage;
+  final List<MovieDetails> moviesDetails;
+  final RequestState moviesDetailsStates;
+  final String moviesDetailsMessage;
 
   MoviesStates copyWith({
     List<Movies>? nowPlayingMovies,

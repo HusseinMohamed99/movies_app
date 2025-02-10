@@ -12,7 +12,7 @@ class BuildRating extends StatelessWidget {
           color: ColorManager.iconRateColor,
           size: 20.sp,
         ),
-        Space(width: 4, height: 0),
+        const Space(width: 4, height: 0),
         Text(
           rating.toStringAsFixed(1),
           style: TextStyleManager.titleMedium(context: context),

@@ -17,7 +17,7 @@ class ShowCast extends StatelessWidget {
           AppString.cast,
           style: TextStyleManager.titleSmall(context: context),
         ),
-        Space(height: 8, width: 0),
+        const Space(height: 8, width: 0),
         ShowCastForMovies(moviesDetailsStates.moviesDetails?.cast),
       ],
     );
@@ -34,7 +34,7 @@ class ShowCastForMovies extends StatelessWidget {
       itemCount: cast?.length ?? 0,
       itemBuilder: (context, index) => CastCard(
         cast: cast?[index] ??
-            Cast(
+            const Cast(
               name: '',
               profileUrl: '',
               gender: 0,

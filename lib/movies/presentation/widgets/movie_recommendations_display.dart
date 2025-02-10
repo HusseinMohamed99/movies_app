@@ -17,8 +17,8 @@ class ShowRecommendations extends StatelessWidget {
           AppString.recommendations,
           style: TextStyleManager.titleSmall(context: context),
         ),
-        Space(height: 8, width: 0),
-        MovieRecommendationsDisplay(),
+        const Space(height: 8, width: 0),
+        const MovieRecommendationsDisplay(),
       ],
     );
   }

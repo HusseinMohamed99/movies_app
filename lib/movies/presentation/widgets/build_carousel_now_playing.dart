@@ -75,7 +75,7 @@ class BuildMovieInfo extends StatelessWidget {
                   color: ColorManager.primaryRedColor,
                   size: 16.sp,
                 ),
-                Space(height: 0, width: 4),
+                const Space(height: 0, width: 4),
                 Text(
                   AppString.nowPlaying.toUpperCase(),
                   style: TextStyleManager.bodySmall(context: context),

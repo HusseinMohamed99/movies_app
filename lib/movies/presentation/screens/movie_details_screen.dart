@@ -1,9 +1,8 @@
 part of './../../../core/helpers/export_manager/export_manager.dart';
 
 class MovieDetailsScreen extends StatelessWidget {
-  final int movieID;
-
   const MovieDetailsScreen({super.key, required this.movieID});
+  final int movieID;
 
   @override
   Widget build(BuildContext context) {

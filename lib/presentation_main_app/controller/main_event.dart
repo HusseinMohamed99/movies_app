@@ -8,9 +8,8 @@ abstract class MainEvent extends Equatable {
 }
 
 class ChangeCurrentIndexEvent extends MainEvent {
-  final int currentIndex;
-
   const ChangeCurrentIndexEvent(this.currentIndex);
+  final int currentIndex;
 
   @override
   List<Object> get props => [currentIndex];

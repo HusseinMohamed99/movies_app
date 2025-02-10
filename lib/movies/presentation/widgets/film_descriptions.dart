@@ -13,9 +13,9 @@ class FilmDescription extends StatelessWidget {
     return Column(
       children: [
         FilmInfoRow(moviesDetailsStates: moviesDetailsStates),
-        Space(height: 16, width: 0),
+        const Space(height: 16, width: 0),
         CinemaOverviewAndGenres(
-          overview: moviesDetailsStates.moviesDetails?.overview ?? "",
+          overview: moviesDetailsStates.moviesDetails?.overview ?? '',
           genres: moviesDetailsStates.moviesDetails?.genres ?? [],
         ),
       ],
@@ -38,7 +38,7 @@ class FilmInfoRow extends StatelessWidget {
       children: [
         PosterPathWidget(
             posterImage: moviesDetailsStates.moviesDetails?.posterPath ?? ''),
-        Space(height: 0, width: 16),
+        const Space(height: 0, width: 16),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,14 +46,14 @@ class FilmInfoRow extends StatelessWidget {
               WatchTrailerButton(
                 trailerUrl: moviesDetailsStates.moviesDetails?.trailerUrl ?? '',
               ),
-              Space(height: 16, width: 0),
+              const Space(height: 16, width: 0),
               CinemaTitle(
                   title: moviesDetailsStates.moviesDetails?.title ?? ''),
-              Space(height: 16, width: 0),
+              const Space(height: 16, width: 0),
               CinemaAttributes(
                 releaseDate: moviesDetailsStates.moviesDetails?.releaseDate
                         .split('-')[0] ??
-                    "",
+                    '',
                 rate: moviesDetailsStates.moviesDetails?.voteAverage
                         .toStringAsFixed(1) ??
                     '',
