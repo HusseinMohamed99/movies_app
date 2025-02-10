@@ -36,7 +36,7 @@ class ShowSimilarMovies extends StatelessWidget {
         } else if (state.moviesDetailsStates == RequestState.loaded) {
           return _buildMoviesList(state);
         } else {
-          return _buildNoDataFound(state);
+          return BuildErrorMessage(errorMessage: state.moviesDetailsMessage);
         }
       },
     );
@@ -90,16 +90,5 @@ class ShowSimilarMovies extends StatelessWidget {
     if (kDebugMode) {
       print(movieID);
     }
-  }
-
-  Widget _buildNoDataFound(MoviesDetailsStates state) {
-    final message = state.moviesSimilarStates == RequestState.error
-        ? state.moviesSimilarMessage
-        : state.moviesDetailsMessage;
-
-    return NoDataFoundWidget(
-      message: message,
-      imagePath: Assets.imagesNoData,
-    );
   }
 }

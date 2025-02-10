@@ -97,7 +97,6 @@ part './../../../movies/presentation/widgets/build_carousel_now_playing.dart';
 part './../../../movies/presentation/widgets/build_header_widget.dart';
 part './../../../movies/presentation/widgets/build_rating.dart';
 part './../../../movies/presentation/widgets/build_release_date_chip.dart';
-part './../../../movies/presentation/widgets/no_data_found_widget.dart';
 part './../../../movies/presentation/widgets/popular_movies_widget.dart';
 part './../../../movies/presentation/widgets/section_cast_or_reviews_list_view.dart';
 part './../../../movies/presentation/widgets/show_cast_for_movies.dart';

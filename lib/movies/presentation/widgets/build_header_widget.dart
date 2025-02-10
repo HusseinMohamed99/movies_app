@@ -16,7 +16,7 @@ class BuildHeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(16.0, 24.0, 16.0, 8.0).r,
+      margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
