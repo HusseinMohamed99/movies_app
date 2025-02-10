@@ -16,13 +16,13 @@ class TvsDetailsStates extends Equatable {
   const TvsDetailsStates({
     this.tvsDetails,
     this.tvsDetailsStates = RequestState.loading,
-    this.tvsDetailsMessage = "",
+    this.tvsDetailsMessage = '',
     this.tvsRecommendation = const [],
     this.tvsRecommendationStates = RequestState.loading,
-    this.tvsRecommendationMessage = "",
+    this.tvsRecommendationMessage = '',
     this.tvsSimilar = const [],
     this.tvsSimilarStates = RequestState.loading,
-    this.tvsSimilarMessage = "",
+    this.tvsSimilarMessage = '',
   });
 
   TvsDetailsStates copyWith({

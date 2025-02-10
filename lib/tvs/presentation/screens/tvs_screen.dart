@@ -5,12 +5,12 @@ class TvsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
+    return const CustomScrollView(
       slivers: [
-        SliverToBoxAdapter(child: const OnTheAirWidget()),
-        SliverToBoxAdapter(child: const AiringTodayWidget()),
-        SliverToBoxAdapter(child: const PopularTvsWidget()),
-        SliverToBoxAdapter(child: const TopRatedTvsWidget()),
+        SliverToBoxAdapter(child: OnTheAirWidget()),
+        SliverToBoxAdapter(child: AiringTodayWidget()),
+        SliverToBoxAdapter(child: PopularTvsWidget()),
+        SliverToBoxAdapter(child: TopRatedTvsWidget()),
         SliverToBoxAdapter(child: Space(height: 24, width: 0)),
       ],
     );
