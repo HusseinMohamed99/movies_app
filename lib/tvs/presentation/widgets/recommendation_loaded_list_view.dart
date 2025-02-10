@@ -13,6 +13,13 @@ class RecommendationLoadedListView extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
       itemCount: state.tvsRecommendation.length,
       itemBuilder: (context, index) {
+        if (state.tvsRecommendation.isEmpty) {
+          return SvgPicture.asset(
+            Assets.imagesNoData,
+            height: 200.h,
+            width: 200.w,
+          );
+        }
         return RecommendationLoadedItem(
           tvsDetailsStates: state,
           index: index,
